@@ -6,8 +6,8 @@
             <img v-for="img in data" :key="img.id" :src= img.src
             class="max-w-lg xl:max-w-2xl max-h-96 absolute grayscale right-10"  
             :class="img.class"/>
-            <img :src="currentImg().src"
-            class="max-w-lg xl:max-w-2xl max-h-96 mr-10 order-1 relative" 
+            <img :src="currentImg().src" :key="currentImg().id"
+            class="max-w-lg xl:max-w-2xl max-h-96 mr-10 order-1 relative bounce-in" 
             :class="currentImg().class" 
             />
         </div>
@@ -17,8 +17,8 @@
                 <p>{{currentImg().desc}}</p>
             </div>
         </div>
-        <span class="absolute inset-y-2/4 left-0 cursor-pointer font-bold text-black sm:text-3xl -ml-8" @click="prevImg">&#10094;</span>
-        <span class="absolute inset-y-2/4 right-0 cursor-pointer font-bold text-black sm:text-3xl -mr-8" @click="nextImg">&#10095;</span>
+        <span class="absolute inset-y-0 left-0 md:mt-28 md:ml-8 lg:-ml-8 lg:mt-0 flex lg:justify-center lg:items-center cursor-pointer font-bold text-lg sm:text-2xl hover:text-3xl" @click="prevImg">&#10094;</span>
+        <span class="absolute inset-y-0 right-0 md:mt-28 md:mr-8 lg:-mr-6 lg:mt-0 flex lg:justify-center lg:items-center cursor-pointer font-bold text-lg sm:text-2xl hover:text-3xl" @click="nextImg">&#10095;</span>
     </div>
     <div v-if="windowWidth < 768"
          class="flex flex-col items-center justify-center">
@@ -26,12 +26,12 @@
             <img :src="currentImg().src"
             class="w-full max-w-xl max-h-96 px-2 mx-auto"  
             />
-            <span class="absolute inset-y-2/4 left-0 cursor-pointer font-bold text-black text-2xl sm:text-3xl p-4" @click="prevImg">&#10094;</span>
-            <span class="absolute inset-y-2/4 right-0 cursor-pointer font-bold text-black text-2xl sm:text-3xl p-4" @click="nextImg">&#10095;</span>
+            <span class="absolute inset-y-0 left-0 flex justify-center items-center cursor-pointer font-bold text-black text-lg sm:text-2xl p-4 hover:text-3xl" @click="prevImg">&#10094;</span>
+            <span class="absolute inset-y-0 right-0 flex justify-center items-center cursor-pointer font-bold text-black text-lg sm:text-2xl p-4 hover:text-3xl" @click="nextImg">&#10095;</span>
          </div>
-            <div class="bg-white w-10/12 rounded-b-lg h-72 sm:h-52 p-6 flex flex-col justify-around">
+            <div class="bg-white w-10/12 rounded-b-lg p-4 flex flex-col justify-around">
                 <p class="font-bold text-sm sm:text-base text-center ">{{currentImg().head}}</p>
-                <p class="text-sm  sm:text-base">{{currentImg().desc}}</p>
+                <p class="text-sm sm:text-base">{{currentImg().desc}}</p>
             </div>
     </div>
   </div>
@@ -51,7 +51,7 @@ let currentIndex = ref(0)
 
 const nextImg = () => {
     currentIndex.value = currentIndex.value + 1
-    if(currentIndex.value  >= 4){
+    if(currentIndex.value  >= data.length){
         currentIndex.value = 0
     }
 }
@@ -77,21 +77,20 @@ window.addEventListener("resize", () => {
 </script>
 
 <style>
-.fade-enter-active,
-.fade-leave-active {
-  transition: all 0.5s ease;
-  overflow: hidden;
-  visibility: visible;
-  position: absolute;
-  width:100%;
-  opacity: 1;
+.bounce-in {
+  animation: bounce-in linear;
+  animation-duration: 750ms;
 }
-
-.fade-enter,
-.fade-leave-to {
-  visibility: hidden;
-  width:100%;
-  opacity: 0;
+@keyframes bounce-in {
+  0% {
+    transform: scale(1);
+  }
+  250% {
+    transform: scale(1.1);
+  }
+  50% { 
+    transform: scale(1); 
+  }
 }
 
 </style>

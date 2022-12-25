@@ -21,7 +21,7 @@
             </nav>
 </div>
             <Transition name="bounce">
-            <div v-if="isOpen" class="w-1/3 text-black fixed right-0">
+            <div v-if="isOpen" class="w-1/3 text-black fixed right-0 z-50">
                 <nav class="flex flex-col gap-2 p-2 bg-white h-screen
                 ">
                     <a class="hover:underline decoration-2 underline-offset-2 decoration-black" href="#">.home</a>
