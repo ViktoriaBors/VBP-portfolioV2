@@ -4,17 +4,25 @@
   <div>
     <ImgSlider></ImgSlider>
   </div>
-   <div class="h-screen mt-12">
-    <EdExCard></EdExCard>
+   <div class="mt-12">
+    <ExpCard></ExpCard>
    </div>
-    <div class="h-screen"></div>
+    <div class="mt-12 pb-12">
+      <EdCard></EdCard>
+    </div>
+    <div class="pb-12">
+      <ProjectsCard></ProjectsCard>
+    </div>
 </div>
 </template>
 
 <script setup>
 import TopNavBar from './components/TopNavBar.vue';
 import ImgSlider from './components/ImgSlider.vue';
-import EdExCard from './components/EdExCard.vue'
+import ExpCard from './components/ExpCard.vue'
+import EdCard from './components/EdCard.vue'
+import ProjectsCard from './components/ProjectsCard.vue'
+
 
 </script>
 

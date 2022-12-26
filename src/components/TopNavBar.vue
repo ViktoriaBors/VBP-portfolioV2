@@ -3,8 +3,8 @@
           ">
             <div class="pl-2">LOGO</div>
             <div class="pr-2">
-            <input id="toggle" type="checkbox" class="relative w-10 h-10 hidden" v-if="windowWidth <= 768" @click="isOpen = !isOpen"  />
-                  <label for="toggle" class="hamburger" v-if="windowWidth <= 768">
+            <input id="toggle" type="checkbox" class="relative hidden" v-if="windowWidth <= 768"  />
+                  <label for="toggle" class="hamburger cursor-pointer p-4" v-if="windowWidth <= 768"  @click="isOpen = !isOpen">
                     <div class="top-bun"></div>
                     <div class="meat"></div>
                     <div class="bottom-bun"></div>
@@ -22,8 +22,7 @@
 </div>
             <Transition name="bounce">
             <div v-if="isOpen" class="w-1/3 text-black fixed right-0 z-50">
-                <nav class="flex flex-col gap-2 p-2 bg-white h-screen
-                ">
+                <nav class="flex flex-col gap-2 p-2 bg-white h-screen">
                     <a class="hover:underline decoration-2 underline-offset-2 decoration-black" href="#">.home</a>
                     <a class="hover:underline decoration-2 underline-offset-2 decoration-black" href="#skills">.skills</a>
                     <a class="hover:underline decoration-2 underline-offset-2 decoration-black" href="#about">.who am i</a>
