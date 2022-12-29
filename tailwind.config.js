@@ -8,7 +8,8 @@ module.exports = {
       'brownl': '#E3D7CB',
       'brownd': '#7D5A4B',
       'gray': '#ECEBE4',
-      'white': '#F0F0F0'
+      'white': '#F0F0F0',
+      'slate': '#cbd5e1'
     }
   },
   plugins: [],

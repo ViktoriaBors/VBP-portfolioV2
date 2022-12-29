@@ -13,6 +13,9 @@
     <div class="pb-12">
       <ProjectsCard></ProjectsCard>
     </div>
+    <div class="p-2">
+      <ContactForm></ContactForm>
+    </div>
 </div>
 </template>
 
@@ -22,7 +25,7 @@ import ImgSlider from './components/ImgSlider.vue';
 import ExpCard from './components/ExpCard.vue'
 import EdCard from './components/EdCard.vue'
 import ProjectsCard from './components/ProjectsCard.vue'
-
+import ContactForm from './components/ContactForm.vue'
 
 </script>
 
