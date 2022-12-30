@@ -16,6 +16,9 @@
     <div class="p-2">
       <ContactForm></ContactForm>
     </div>
+    <div>
+      <SkillsCard></SkillsCard>
+    </div>
 </div>
 </template>
 
@@ -26,6 +29,7 @@ import ExpCard from './components/ExpCard.vue'
 import EdCard from './components/EdCard.vue'
 import ProjectsCard from './components/ProjectsCard.vue'
 import ContactForm from './components/ContactForm.vue'
+import SkillsCard from './components/SkillsCard.vue'
 
 </script>
 
