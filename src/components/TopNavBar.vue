@@ -1,7 +1,9 @@
 <template>
 <div id="topMenu" :class="scY > 50 ? ['w-full mx-0'] : ['w-11/12 rounded-full mx-auto']" class="sticky top-0 h-12 flex items-center justify-between bg-white z-50
           ">
-            <div class="pl-2">LOGO</div>
+            <div class="pl-2">
+              <img src="img/logo1.png" class="w-10 ml-2" alt="">
+            </div>
             <div class="pr-2">
             <input id="toggle" type="checkbox" class="relative hidden" v-if="windowWidth <= 768"  />
                   <label for="toggle" class="hamburger cursor-pointer p-4" v-if="windowWidth <= 768"  @click="isOpen = !isOpen">
@@ -11,7 +13,7 @@
                   </label>
             </div>
             <nav v-if="windowWidth > 768" class="flex flex-row gap-4 bg-white rounded-full">
-                    <a class="hover:underline decoration-2 underline-offset-2 decoration-black" href="#">.home</a>
+                    <a class="hover:underline decoration-2 underline-offset-2 decoration-black" href="#home">.home</a>
                     <a class="hover:underline decoration-2 underline-offset-2 decoration-black" href="#skills">.skills</a>
                     <a class="hover:underline decoration-2 underline-offset-2 decoration-black" href="#about">.who am i</a>
                     <a class="hover:underline decoration-2 underline-offset-2 decoration-black" href="#experiences">.experiences</a>

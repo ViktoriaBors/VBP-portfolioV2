@@ -1,7 +1,7 @@
 <template> 
 <div class="flex flex-row justify-around items-center">
   <form action="https://formsubmit.io/send/a9369a28-1f62-47fc-b5e3-08ba767a2631" method="POST"
-   class="flex-1 lg:flex-none w-1/2 rounded-lg border-2 border-dashed border-slate m-4 p-4 bg-gray ">
+   class="hidden flex-1 lg:flex-none w-1/2 rounded-lg border-2 border-dashed border-slate m-4 p-4 bg-gray ">
     <input name="_formsubmit_id" type="text" style="display:none">
     <h2 class="text-lg mb-2">Send me an email</h2>
     <div class="mb-6">
@@ -15,7 +15,7 @@
     </div>
      <input value="Send an e-mail >>" type="submit" class="text-white bg-greenv hover:italic font-bold text-sm px-4 py-2.5 text-center sm:w-40 sm:text-left">
   </form>
-    <div class="wrapper mt-4 mr-2 hidden md:flex">
+    <div class="wrapper mt-4 mr-2 flex">
       <div class="lid one"></div>
       <div class="lid two"></div>
       <div class="envelope"></div>

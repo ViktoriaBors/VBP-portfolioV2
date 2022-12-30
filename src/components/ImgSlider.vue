@@ -1,8 +1,8 @@
 <template>
   <div class="p-2 w-11/12 mx-auto">
     <div v-if="windowWidth > 768"
-        class="flex flex-col lg:flex-row items-center relative">
-        <div class="relative lg:order-1">
+        class="flex flex-col xl:flex-row items-center relative">
+        <div class="relative xl:order-1">
             <img v-for="img in data" :key="img.id" :src= img.src
             class="max-w-lg xl:max-w-2xl max-h-96 absolute grayscale right-10"  
             :class="img.class"/>
@@ -12,13 +12,13 @@
             />
         </div>
         <div class="w-full bg-white lg:rounded-l-lg p-4">
-            <div class=" h-72 sm:h-52 p-6 flex flex-col justify-around">
+            <div class="h-72 sm:h-52 p-6 flex flex-col justify-around">
                 <p class="font-bold text-center pb-2">{{currentImg().head}}</p>
                 <p>{{currentImg().desc}}</p>
             </div>
         </div>
-        <span class="absolute inset-y-0 left-0 md:mt-28 md:ml-8 lg:-ml-8 lg:mt-0 flex lg:justify-center lg:items-center cursor-pointer font-bold text-lg sm:text-2xl hover:text-3xl" @click="prevImg">&#10094;</span>
-        <span class="absolute inset-y-0 right-0 md:mt-28 md:mr-8 lg:-mr-6 lg:mt-0 flex lg:justify-center lg:items-center cursor-pointer font-bold text-lg sm:text-2xl hover:text-3xl" @click="nextImg">&#10095;</span>
+        <span class="absolute inset-y-0 left-0 md:mt-28 md:ml-8 xl:-ml-8 xl:mt-0 flex xl:justify-center xl:items-center cursor-pointer font-bold text-lg sm:text-2xl hover:text-3xl" @click="prevImg">&#10094;</span>
+        <span class="absolute inset-y-0 right-0 md:mt-28 md:mr-8 xl:-mr-6 xl:mt-0 flex xl:justify-center xl:items-center cursor-pointer font-bold text-lg sm:text-2xl hover:text-3xl" @click="nextImg">&#10095;</span>
     </div>
     <div v-if="windowWidth < 768"
          class="flex flex-col items-center justify-center">
