@@ -1,5 +1,5 @@
 <template>
-<div class="mx-4 py-4 grid gap-4 grid-cols-1 md:grid-cols-3 justify-items-center">    
+<div class="mx-4 py-4 flex flex-col md:flex-row gap-4 justify-around items-center md:items-start">    
 <div v-for="one in data" :key="one.id">
   <div class="rounded-lg shadow-lg bg-white max-w-sm">
       <img class="rounded-t-lg" :src="one.img" alt=""/>
@@ -34,8 +34,8 @@
 import {ref} from 'vue'
 
 let data = [
-    {id: 0, isActive: ref(false), title: "Junior Developer (Trainee)", date: "2022.October - Now", desc: "Formula 400 (Hungarian Company) builds web application and software platforms for Insurance Companies. I am responsible to make updates in the product description and implement new products both in the database, on backend side (through webservices) and on frontend (visualize them on the User Interface). The project written in Vue.Js and Node.Js.", img: 'img/coverme.jpg', skills: 'JavaScript, Vue Js, Node Js'},
-    {id: 1, isActive: ref(false), title: "Translator (Volunteer)", date: "2023. January - Now", desc: "The Modern JavaScript Tutorial is an incredible site to learn JavaScript. It has been translated to different languages by a group of volunteers, although the Hungarian translation process has slowed down. A group of JavaScript enthusiastic (including me) has started to make a solid plan to start up the translation process again.", img:'img/jsLogo2.jpg', skills: ''}
+    {id: 0, isActive: ref(false), title: "Junior Developer", date: "2022.October - Now", desc: "Formula 400 (Hungarian Company) builds web application and software platforms for Insurance Companies. I am responsible to make updates in the product description and implement new products both in the database, on backend side (through webservices) and on frontend (visualize them on the User Interface). The project written in Vue.Js and Node.Js.", img: 'img/coverme.jpg', skills: 'JavaScript, Vue Js, Node Js'},
+    // {id: 1, isActive: ref(false), title: "Translator (Volunteer)", date: "2023. January - Now", desc: "The Modern JavaScript Tutorial is an incredible site to learn JavaScript. It has been translated to different languages by a group of volunteers, although the Hungarian translation process has slowed down. A group of JavaScript enthusiastic (including me) has started to make a solid plan to start up the translation process again.", img:'img/jsLogo2.jpg', skills: ''}
 ]
 
 const isOpen = ref(false)

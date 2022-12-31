@@ -43,7 +43,7 @@ import {ref} from 'vue'
 let data = [
             {id:1, src: "../img/geo.jpg",head:"Down To Earth", desc:"The environment have always been a big part of me. I have survived many field trips, mapping courses and other extreme assignments. I have always loved to hike on the field or sitting in the lab behind the microscope.", class:"rotate-2"},
             {id:2, src: "./img/it.jpg", head:"IT works...Why?", desc:"Why? This is the ultimate question for a developer. It can be asked always. Why doesn't it work? Why does it work? Etc. Sometimes a beer and chips would help me to answer these questions. ", class:"rotate-6"},
-            {id:3, src: "./img/family.jpg", head:"Wife, mom, friend – This girl has MANY names", desc:"family pic", class:"rotate-12"},
+            {id:3, src: "./img/family.jpg", head:"Wife, mom, friend...", desc:"... student, employee, chef. This girls has MANY NAMES. I can fulfill multiple roles and do multiple tasks per day.", class:"rotate-12"},
             {id:4, src: "./img/pol.jpg", head:"Plan C for career - Poledance", desc:"No, seriously... It is a sport that actually can give you muscles and muscle aches. I have done poledance for 2-3 years (before pregnancy) and even won one!", class:"-rotate-12"},
       ]
 

@@ -1,8 +1,8 @@
 <template>
-<div id="topMenu" :class="scY > 50 ? ['w-full mx-0'] : ['w-11/12 rounded-full mx-auto']" class="sticky top-0 h-12 flex items-center justify-between bg-white z-50
+<div id="topMenu" :class="scY > 50 ? ['w-full mx-0'] : ['w-11/12 rounded-full mx-auto']" class="shadow-md sticky top-0 h-12 flex items-center justify-between bg-white z-50
           ">
             <div class="pl-2">
-              <img src="img/logo1.png" class="w-10 ml-2" alt="">
+              <img src="img/logoNoBg.png" class="w-10 ml-2" alt="">
             </div>
             <div class="pr-2">
             <input id="toggle" type="checkbox" class="relative hidden" v-if="windowWidth <= 768"  />
@@ -13,25 +13,25 @@
                   </label>
             </div>
             <nav v-if="windowWidth > 768" class="flex flex-row gap-4 bg-white rounded-full">
-                    <a class="hover:underline decoration-2 underline-offset-2 decoration-black" href="#home">.home</a>
-                    <a class="hover:underline decoration-2 underline-offset-2 decoration-black" href="#skills">.skills</a>
-                    <a class="hover:underline decoration-2 underline-offset-2 decoration-black" href="#about">.who am i</a>
-                    <a class="hover:underline decoration-2 underline-offset-2 decoration-black" href="#experiences">.experiences</a>
-                    <a class="hover:underline decoration-2 underline-offset-2 decoration-black" href="#projects">.projects</a>
-                    <a class="hover:underline decoration-2 underline-offset-2 decoration-black" href="#education">.education</a>
-                    <a class="hover:underline decoration-2 underline-offset-2 decoration-black pr-2" href="#contact">.contact me</a>
+                    <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#home">.home</a>
+                    <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#skills">.skills</a>
+                    <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#about">.who am i</a>
+                    <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#experiences">.experiences</a>
+                    <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#projects">.projects</a>
+                    <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#education">.education</a>
+                    <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv pr-2" href="#contact">.contact me</a>
             </nav>
 </div>
             <Transition name="bounce">
             <div v-if="isOpen" class="w-1/3 text-black fixed right-0 z-50">
                 <nav class="flex flex-col gap-2 p-2 bg-white h-screen">
-                    <a class="hover:underline decoration-2 underline-offset-2 decoration-black" href="#">.home</a>
-                    <a class="hover:underline decoration-2 underline-offset-2 decoration-black" href="#skills">.skills</a>
-                    <a class="hover:underline decoration-2 underline-offset-2 decoration-black" href="#about">.who am i</a>
-                    <a class="hover:underline decoration-2 underline-offset-2 decoration-black" href="#experiences">.experiences</a>
-                    <a class="hover:underline decoration-2 underline-offset-2 decoration-black" href="#projects">.projects</a>
-                    <a class="hover:underline decoration-2 underline-offset-2 decoration-black" href="#education">.education</a>
-                    <a class="hover:underline decoration-2 underline-offset-2 decoration-black" href="#contact">.contact me</a>
+                    <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#">.home</a>
+                    <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#skills">.skills</a>
+                    <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#about">.who am i</a>
+                    <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#experiences">.experiences</a>
+                    <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#projects">.projects</a>
+                    <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#education">.education</a>
+                    <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#contact">.contact me</a>
                 </nav>
             </div>
             </Transition>

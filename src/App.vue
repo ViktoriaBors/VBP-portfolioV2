@@ -1,10 +1,11 @@
 <template>
 <div>
-<section id="home" class="relative">
+<TopNavBar/>
+<a href="#" id="top" class="z-50 p-4 pr-0 font-bold text-black text-xl sm:text-3xl fixed bottom-0 right-0">&#8679;</a>
+<section id="home" class="relative -mt-40 pt-36">
   <div class="md:h-screen">
-    <img src="img/profile3.png" alt="" class="hidden md:block absolute top-16 right-0 z-0 sepia">
-    <TopNavBar/>
-    <div class="text-white md:text-black md:w-1/2 p-12 z-50">
+    <img src="img/profile3.png" alt="" class="hidden md:block absolute top-72 right-0 z-0 sepia">
+    <div class="text-white md:text-black md:w-1/2 p-8 md:mt-28">
       <h1 class="text-xl font-bold pb-2">Hi There,</h1>
       <h3 class="text-3xl font-bold pb-2">I'm Viktoria Bors-Pajuste</h3>
       <ul class="pb-4">
@@ -16,13 +17,16 @@
       <p class="pb-2 text-justify">What does a highly educated person do, who heard enough of gaga and played way too much peekaboo?? Fell in love with WEB DEVELOPMENT.</p>
       <p>I am a self-taught/bootcamper web developer, focused on frontend technologies.</p>
     </div>
+    <div id="scroll" class="hidden md:block text-brownd font-bold absolute left-1/4 -ml-14 pl-2 mt-24 lg:mt-24">Scroll Down</div>
+    <div id="vl" class="hidden md:block border-l-2 absolute top-2/3 left-1/4 border-brownl">
+    </div>
   </div>
 </section>
 <section id="skills">
   <h1 class="font-bold text-xl px-12 pt-4">.stacks</h1>
   <SkillsCard/>
 </section>
-<section id="about" class="bg-greenv pb-10 md:p-20 mt-20 relative">
+<section id="about" class="bg-greenv pb-10 md:p-20 mt-24 relative">
   <div>
   <h1 class="font-bold text-white text-xl px-12 pt-6 text-right pb-2 md:pb-20">.who am i</h1>
   <ImgSlider/>
@@ -62,6 +66,12 @@ import ProjectsCard from './components/ProjectsCard.vue'
 import ContactForm from './components/ContactForm.vue'
 import SkillsCard from './components/SkillsCard.vue'
 
+import {onMounted} from 'vue'
+
+onMounted(()=>{
+  swal("Still under Construction!", "Soon ready - Worth to wait", "info");
+})
+
 </script>
 
 <style scoped>
@@ -79,6 +89,12 @@ import SkillsCard from './components/SkillsCard.vue'
 }
 #projects>div{
   transform: skewY(5deg)
+}
+#vl{
+  height: 450px;
+}
+#scroll{
+  text-shadow: #E3D7CB 4px 4px;
 }
 @media only screen and (min-width: 768px) {
   #home{

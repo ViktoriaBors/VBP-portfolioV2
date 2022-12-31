@@ -1,5 +1,5 @@
 <template>
-<div class="mx-4 grid gap-4 grid-cols-1 md:grid-cols-3 justify-items-center">    
+<div class="mx-4 flex flex-col-reverse md:flex-row items-center gap-4 justify-items-center">    
 <div v-for="one in data" :key="one.id">
   <div class="rounded-lg shadow-lg bg-white max-w-sm flex flex-col items-center">
       <img class="" :src="one.img" alt=""/>
