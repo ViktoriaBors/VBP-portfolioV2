@@ -1,36 +1,37 @@
 <template>
-  <div class="p-2 w-11/12 mx-auto">
+  <div class="w-11/12 p-2 mx-auto">
     <div v-if="windowWidth > 768"
-        class="flex flex-col xl:flex-row items-center relative">
-        <div class="relative xl:order-1">
-            <img v-for="img in data" :key="img.id" :src= img.src
-            class="max-w-lg xl:max-w-2xl max-h-96 absolute grayscale right-10"  
-            :class="img.class"/>
+        class="relative flex flex-col items-center xl:flex-row">
+        <div class="relative xl:order-1" @click="openModal">
+            <img v-for="img in data" :key="img.id" :src= img.src 
+            class="absolute max-w-lg xl:max-w-2xl max-h-96 grayscale right-10"  
+            :class="img.class" />
             <img :src="currentImg().src" :key="currentImg().id"
-            class="max-w-lg xl:max-w-2xl max-h-96 mr-10 order-1 relative bounce-in" 
-            :class="currentImg().class" 
+            class="relative order-1 max-w-lg mr-10 xl:max-w-2xl max-h-96 bounce-in" 
+            :class="currentImg().class"
+            
             />
         </div>
-        <div class="w-full bg-white lg:rounded-l-lg p-4">
-            <div class="h-72 sm:h-52 p-6 flex flex-col justify-around">
-                <p class="font-bold text-center pb-2">{{currentImg().head}}</p>
+        <div class="w-full p-4 bg-white lg:rounded-l-lg">
+            <div class="flex flex-col justify-around p-6 h-72 sm:h-52">
+                <p class="pb-2 font-bold text-center">{{currentImg().head}}</p>
                 <p>{{currentImg().desc}}</p>
             </div>
         </div>
-        <span class="absolute inset-y-0 left-0 md:mt-28 md:ml-8 xl:-ml-8 xl:mt-0 flex xl:justify-center xl:items-center cursor-pointer font-bold text-lg sm:text-2xl hover:text-3xl" @click="prevImg">&#10094;</span>
-        <span class="absolute inset-y-0 right-0 md:mt-28 md:mr-8 xl:-mr-6 xl:mt-0 flex xl:justify-center xl:items-center cursor-pointer font-bold text-lg sm:text-2xl hover:text-3xl" @click="nextImg">&#10095;</span>
+        <span class="absolute inset-y-0 left-0 flex text-lg font-bold cursor-pointer md:mt-28 md:ml-8 xl:-ml-8 xl:mt-0 xl:justify-center xl:items-center sm:text-2xl hover:text-3xl" @click="prevImg">&#10094;</span>
+        <span class="absolute inset-y-0 right-0 flex text-lg font-bold cursor-pointer md:mt-28 md:mr-8 xl:-mr-6 xl:mt-0 xl:justify-center xl:items-center sm:text-2xl hover:text-3xl" @click="nextImg">&#10095;</span>
     </div>
     <div v-if="windowWidth < 768"
          class="flex flex-col items-center justify-center">
          <div class="relative">
             <img :src="currentImg().src"
-            class="w-full max-w-xl max-h-96 px-2 mx-auto"  
+            class="w-full max-w-xl px-2 mx-auto max-h-96"  
             />
-            <span class="absolute inset-y-0 left-0 flex justify-center items-center cursor-pointer font-bold text-black text-lg sm:text-2xl p-4 hover:text-3xl" @click="prevImg">&#10094;</span>
-            <span class="absolute inset-y-0 right-0 flex justify-center items-center cursor-pointer font-bold text-black text-lg sm:text-2xl p-4 hover:text-3xl" @click="nextImg">&#10095;</span>
+            <span class="absolute inset-y-0 left-0 flex items-center justify-center p-4 text-lg font-bold text-black cursor-pointer sm:text-2xl hover:text-3xl" @click="prevImg">&#10094;</span>
+            <span class="absolute inset-y-0 right-0 flex items-center justify-center p-4 text-lg font-bold text-black cursor-pointer sm:text-2xl hover:text-3xl" @click="nextImg">&#10095;</span>
          </div>
-            <div class="bg-white w-10/12 rounded-b-lg p-4 flex flex-col justify-around">
-                <p class="font-bold text-sm sm:text-base text-center ">{{currentImg().head}}</p>
+            <div class="flex flex-col justify-around w-10/12 p-4 bg-white rounded-b-lg">
+                <p class="text-sm font-bold text-center sm:text-base ">{{currentImg().head}}</p>
                 <p class="text-sm sm:text-base">{{currentImg().desc}}</p>
             </div>
     </div>
@@ -39,6 +40,7 @@
 
 <script setup>
 import {ref} from 'vue'
+import Modal from '../components/Modal.vue'
 
 let data = [
             {id:1, src: "../img/geo.jpg",head:"Down To Earth", desc:"The environment have always been a big part of me. I have survived many field trips, mapping courses and other extreme assignments. I have always loved to hike on the field or sitting in the lab behind the microscope.", class:"rotate-2"},
@@ -74,6 +76,13 @@ window.addEventListener("resize", () => {
   windowWidth.value = window.innerWidth
 });
 
+let isShow = ref(false);
+const openModal = () =>{
+  console.log(isShow.value)
+  isShow.value = true
+}
+
+defineProps(['img'])
 </script>
 
 <style>

@@ -1,20 +1,22 @@
 <template>
-<div class="mx-4 flex flex-col-reverse md:flex-row items-center gap-4 justify-items-center">    
+<div class="flex flex-col items-center justify-around gap-4 py-4 mx-4 md:flex-row md:items-start">    
 <div v-for="one in data" :key="one.id">
-  <div class="rounded-lg shadow-lg bg-white max-w-sm flex flex-col items-center">
+  <div class="flex flex-col items-center max-w-sm bg-white rounded-lg shadow-lg">
       <img class="" :src="one.img" alt=""/>
     <div class="p-6">
-      <h5 class="text-gray-900 text-xl font-medium">{{one.title}}</h5>
-      <h5 class="text-gray-900 text-lg italic font-medium">{{one.date}}</h5>
-      <p class="text-gray-900 text-sm italic mb-2">{{one.skills}}</p>
-      <p class="text-gray-700 text-base mb-4">
+      <h5 class="text-xl font-medium text-gray-900">{{one.title}}</h5>
+      <h5 class="text-lg italic font-medium text-gray-900">{{one.date}}</h5>
+      <p class="mb-2 text-sm italic text-gray-900">{{one.skills}}</p>
+      <p class="mb-4 text-base text-gray-700">
         <TransitionGroup name="fade">
         <span :key='1'>{{ one.isActive.value ? one.desc.slice(0,150) :  one.desc.slice(0,150)+'...' }}</span>
          <span :key='2' v-if= one.isActive.value>{{one.desc.slice(150)}}</span>
         </TransitionGroup>
       </p>
-      <button type="button" class="font-medium text-md border-b-2 text-greenv hover:italic"
-      @click="open(one.id)"> {{ !one.isActive.value ? 'read more' : 'read less' }}</button>
+      <ReadMoreButton class="text-sm"
+            type="button"
+            @click="open(one.id)" :isActive="one.isActive.value"
+          />
     </div>
   </div>
 </div> 
@@ -23,6 +25,7 @@
 
 <script setup>
 import {ref} from 'vue'
+import ReadMoreButton from '../components/ReadMoreButton.vue'
 
 let data = [
     {id: 0, isActive: ref(false), title: "Environmental Engineering / Geology", date: "Master Degree", desc: "Environmental Engineer study program with focus on  soil, groundwater, drinking water pollution and wastewater treatment. The geology education has provided advanced training in geology and geological problem solving. ", img:'img/eotvos2.jpg', skills: 'Aalborg University / Eotvos Lorand University'},

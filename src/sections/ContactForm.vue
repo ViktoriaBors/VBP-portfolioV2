@@ -1,21 +1,21 @@
 <template> 
-<div class="flex flex-row justify-around items-center">
+<div class="flex flex-row items-center justify-around">
   <form action="https://formsubmit.io/send/a9369a28-1f62-47fc-b5e3-08ba767a2631" method="POST"
-   class="flex-1 lg:flex-none w-1/2 rounded-lg border-2 border-dashed border-slate m-4 p-4 bg-gray ">
+   class="flex-1 w-1/2 p-4 m-4 border-2 border-dashed rounded-lg lg:flex-none border-slate bg-gray ">
     <input name="_formsubmit_id" type="text" style="display:none">
     <input name="_redirect" type="hidden" id="name" value="https://www.viktoria-pajuste.hu/#contact">
-    <h2 class="text-lg mb-2">Send me an email</h2>
+    <h2 class="mb-2 text-lg">Send me an email</h2>
       <input type="email" name="email" id="email" class="mb-4 bg-gray-50 border border-slate text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="Your Email" required>
       <input type="text" name="name" id="name" class="mb-4 bg-gray-50 border border-slate text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="Your Name" required>
       <textarea id="message" name="message" rows="4" class="mb-4 bg-gray-50 border border-slate text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="Your Message comes here" required></textarea>
-     <input value="Send an e-mail >>" type="submit" class="text-white bg-greenv hover:italic font-bold text-sm px-4 py-2.5 text-center sm:w-40 sm:text-left">
+      <BaseButton text="send an email"><input type="submit" ></BaseButton>
   </form>
-    <div class="hidden md:flex wrapper mt-4 mr-2">
+    <div class="hidden mt-4 mr-2 md:flex wrapper">
       <div class="lid one"></div>
       <div class="lid two"></div>
       <div class="envelope"></div>
       <div class="letter">
-        <p class="text-base font-bold pt-2"><span class="text-xl mr-2">&#8592;</span>Write me there</p>
+        <p class="pt-2 text-base font-bold"><span class="mr-2 text-xl">&#8592;</span>Write me there</p>
     </div>
     </div>
   </div> 
@@ -23,7 +23,8 @@
 </template>
 
 <script setup>
-
+import BaseButton from '../components/BaseButton.vue'
+defineProps(['text'])
 </script>
 
 <style scoped>
