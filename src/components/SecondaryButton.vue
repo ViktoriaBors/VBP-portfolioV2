@@ -46,4 +46,9 @@ button:hover::after {
         width: calc(100% + 9px);
         height: calc(100% + 9px);
 }
+button:hover{
+        background-color: #24993F;
+        color: white;
+        transition: .3s ease-in-out;
+}
 </style>

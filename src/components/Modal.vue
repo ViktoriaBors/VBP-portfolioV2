@@ -1,15 +1,12 @@
 <template>
-    <div class="relative w-full h-full mx-auto sm:w-4/5 lg:w-1/2">
+    <div class="relative w-screen h-screen max-w-7xl">
         <!-- Modal content -->
         <div class="relative flex flex-col text-current bg-white border-none rounded-md shadow-lg outline-none pointer-events-auto bg-clip-padding">
-            <!-- Modal header -->
-             <div
-              class="flex items-center justify-between flex-shrink-0 p-4 border-b border-gray-200 modal-header rounded-t-md">
-                <img src="" alt="">
-            </div>
+            <!-- Modal header -->              
+                <img :src="img" alt="" class="p-2 lg:p-4">
             <!-- Modal footer -->
-            <div class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
-                <button @click="isShow=false"  type="button" class="cursor-pointer inline-block px-6 py-2.5 bg-indigo-200 text-gray-700 font-bold text-xs leading-tight rounded shadow-md hover:bg-indigo-300 hover:shadow-lg active:bg-indigo-400 active:shadow-lg">Close</button>
+            <div class="flex items-center justify-center p-6 space-x-2 border-t rounded-b border-greenv boder-2">
+                <button @click="emit('closeModal')"  type="button" class="w-16">Close</button>
             </div>
         </div>
     </div>  
@@ -20,9 +17,43 @@ const props = defineProps([
     'img'
 ])
 
-console.log(props.img)
+const emit = defineEmits(['closeModal']);
+
 </script>
 
-<style>
-
+<style scoped>
+button {
+    position: relative;
+    padding: 2px;
+    margin: auto;
+    color: #50AB65;
+    font-weight: bolder;
+    cursor: pointer;
+} 
+button::before,
+button::after {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        transition: .3s ease-in-out;
+    }
+    
+button::before {
+        bottom: -5px;
+        left: -5px;
+        border-bottom: 1px solid #50AB65;
+        border-left: 1px solid #50AB65;
+}
+button::after {
+        right: -5px;
+        top: -5px;
+        border-top: 1px solid #50AB65;
+        border-right: 1px solid #50AB65;
+}    
+button:hover::before,
+button:hover::after {
+        width: calc(100% + 9px);
+        height: calc(100% + 9px);
+}
 </style>

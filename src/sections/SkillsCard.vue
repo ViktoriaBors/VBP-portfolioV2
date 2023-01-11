@@ -1,10 +1,10 @@
 <template>
-  <div class="p-6 bg-gray m-6 rounded-lg">
-    <p class="font-bold pb-2">These are the technologies I use every day to build cool web applications.</p>
+  <div class="p-6 m-6 rounded-lg bg-gray md:h-[500px]" >
+    <p class="pb-2 font-bold">These are the technologies I use every day to build cool web applications.</p>
     <p class="px-4"> I am a JavaScript enthusiast with a primary focus on Vue Js. I also have some insight into Node.Js as a backend technology. As a database, I like to use JSON-based databases, like MongoDB.
    For styling, I am a big fan of Tailwind Css, but also familiar with Bootstrap. Version control? Obviously Git and Github </p>
-   <div class="flex flex-row flex-wrap justify-center align-center w-full p-6">
-<div class="p-3">
+   <div class="flex flex-row flex-wrap items-center justify-center mt-12 md:grid md:grid-cols-6 md:justify-items-center">
+      <div class="p-3">
         <img src="img/html-removebg-preview.png" class="max-h-20" alt="HTML 5">
         <p>HTML</p>
       </div>
@@ -21,7 +21,7 @@
         <p>SASS</p>
       </div>
       <div class="p-3">
-        <img src="img/bootstrap-removebg-preview.png" class="max-h-20 pb-2" alt="Bootstrap 5">
+        <img src="img/bootstrap-removebg-preview.png" class="pb-2 max-h-20" alt="Bootstrap 5">
         <p>Bootstrap 5</p>
       </div>
       <div class="p-3">

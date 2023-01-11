@@ -6,9 +6,6 @@
 const props = defineProps([
     'isActive'
 ])
-
-console.log(props.isActive)
-
 </script>
 
 <style scoped>

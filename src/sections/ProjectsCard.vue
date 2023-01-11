@@ -3,7 +3,9 @@
 <div v-for="project in projects" :key="project.id">
  <div class="flex justify-center px-4 py-4">
         <div class="flex flex-col max-w-sm bg-white rounded-lg shadow-lg md:max-w-5xl md:flex-row">
-            <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" :src="project.img" alt="" />
+            <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
+             :src="project.img" alt=""
+             @click="loadImg"/>
             <div class="flex flex-col justify-center p-6">
                 <h5 class="text-xl font-medium text-gray-900">{{project.title}}</h5>
                 <h5 class="italic font-medium text-gray-900 text-md">{{project.stacks}}</h5>
@@ -40,8 +42,6 @@ import {ref} from 'vue'
 import SecondaryButton from '../components/SecondaryButton.vue'
 import ReadMoreButton from '../components/ReadMoreButton.vue'
 import BaseButton from '../components/BaseButton.vue'
-
-defineProps(['text'])
 
 let projects = [
     {id:0, isActive: ref(false), title: 'SpaceRock', stacks: 'JavaScript, Node Js, Mongo DB, Vue Js, Tailwind Css', desc: 'JavaScript module exam project. SpaceRock is inspired by ESA SACF. The project is actually a CRUD application mixed with some interesting geological topic about the analogue and simulant samples from the Moon. The user can search in the database and after registration and login the user can add new sample, modify and delete sample. It has a image upload feature as well. Since then, the project has got updated and re-written in Vue Js framework.', linkServer: 'https://spacerockvue.onrender.com/', linkGit: 'https://github.com/ViktoriaBors/SpaceRockVue', img:'img/spacerock1.png' },

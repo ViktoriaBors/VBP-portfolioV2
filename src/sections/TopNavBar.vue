@@ -1,12 +1,11 @@
 <template>
-<div id="topMenu" :class="scY > 50 ? ['w-full mx-0'] : ['w-11/12 rounded-full mx-auto']" class="shadow-md sticky top-0 h-12 flex items-center justify-between bg-white z-50
-          ">
+<div id="topMenu" :class="scY > 50 ? ['w-full mx-0'] : ['w-11/12 rounded-full mx-auto']" class="sticky top-0 z-50 flex items-center justify-between h-12 bg-white shadow-md ">
             <div class="pl-2">
-              <img src="img/logoNoBg.png" class="w-10 ml-2" alt="">
+              <img src="img/logoNoBg.png" class="w-20 ml-2" alt="">
             </div>
             <div class="pr-2">
             <input id="toggle" type="checkbox" class="relative hidden" v-if="windowWidth <= 768"  />
-                  <label for="toggle" class="hamburger cursor-pointer p-4" v-if="windowWidth <= 768"  @click="isOpen = !isOpen">
+                  <label for="toggle" class="p-4 cursor-pointer hamburger" v-if="windowWidth <= 768"  @click="isOpen = !isOpen">
                     <div class="top-bun"></div>
                     <div class="meat"></div>
                     <div class="bottom-bun"></div>
@@ -19,12 +18,12 @@
                     <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#experiences">.experiences</a>
                     <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#projects">.projects</a>
                     <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#education">.education</a>
-                    <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv pr-2" href="#contact">.contact me</a>
+                    <a class="pr-2 hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#contact">.contact me</a>
             </nav>
 </div>
             <Transition name="bounce">
-            <div v-if="isOpen" class="w-1/3 text-black fixed right-0 z-50">
-                <nav class="flex flex-col gap-2 p-2 bg-white h-screen">
+            <div v-if="isOpen" class="fixed right-0 z-50 w-1/3 text-black">
+                <nav class="flex flex-col h-screen gap-2 p-2 bg-white">
                     <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#">.home</a>
                     <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#skills">.skills</a>
                     <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#about">.who am i</a>
