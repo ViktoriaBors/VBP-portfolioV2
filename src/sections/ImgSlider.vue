@@ -7,7 +7,7 @@
             class="absolute max-w-md xl:max-w-2xl max-h-96 grayscale right-10"  
             :class="img.class" />
             <img :src="currentImg().src" :key="currentImg().id"
-            class="relative order-1 max-w-md mr-10 xl:max-w-2xl max-h-96 bounce-in" 
+            class="relative order-1 max-w-md mr-10 cursor-pointer xl:max-w-2xl max-h-96 bounce-in" 
             :class="currentImg().class"
             @click="loadImg"
             />

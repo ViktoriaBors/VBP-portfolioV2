@@ -1,5 +1,5 @@
 <template>
-  <div class="p-6 m-6 rounded-lg bg-gray md:h-[500px]" >
+  <div class="p-6 m-2 rounded-lg bg-gray md:h-[500px]" >
     <p class="pb-2 font-bold">These are the technologies I use every day to build cool web applications.</p>
     <p class="px-4"> I am a JavaScript enthusiast with a primary focus on Vue Js. I also have some insight into Node.Js as a backend technology. As a database, I like to use JSON-based databases, like MongoDB.
    For styling, I am a big fan of Tailwind Css, but also familiar with Bootstrap. Version control? Obviously Git and Github </p>

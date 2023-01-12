@@ -1,6 +1,6 @@
 <template>
 <div class="grid grid-cols-1 gap-4 py-4 md:grid-cols-3 justify-items-center">    
-<div v-for="one in data" :key="one.id" class="max-w-sm bg-white rounded-lg shadow-lg">
+<div v-for="one in data" :key="one.id" class="max-w-sm m-2 bg-white rounded-lg shadow-lg">
   <img :src="one.img" alt="" class="h-[200px] mx-auto"/>
   <div class="p-4">
       <h5 class="text-xl font-medium text-gray-900">{{one.title}}</h5>

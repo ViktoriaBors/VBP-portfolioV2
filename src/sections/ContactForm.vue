@@ -1,6 +1,6 @@
 <template> 
 <div class="flex flex-row items-center justify-around">
-  <form action="https://formsubmit.io/send/a9369a28-1f62-47fc-b5e3-08ba767a2631" method="POST"
+  <form action="https://formsubmit.io/send/viktoria.pajuste@gmail.com" method="POST"
    class="flex-1 w-1/2 p-4 m-4 border-2 border-dashed rounded-lg lg:flex-none border-slate bg-gray ">
     <input name="_formsubmit_id" type="text" style="display:none">
     <input name="_redirect" type="hidden" id="name" value="https://www.viktoria-pajuste.hu/#contact">

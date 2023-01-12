@@ -1,8 +1,8 @@
 <template>
-<div class="grid grid-cols-1 gap-4 py-4 m-2 md:grid-cols-2 justify-items-center">    
+<div class="grid grid-cols-1 gap-4 py-4 min-[800px]:grid-cols-2 justify-items-center">    
 <div class="md:justify-self-center"  v-for="one in data" :key="one.id">
-  <div class="max-w-sm bg-white rounded-lg shadow-lg">
-      <img class="max-w-sm pb-2 rounded-t-lg" :src="one.img" alt=""/>
+  <div class="max-w-xs bg-white rounded-lg shadow-lg md:max-w-sm">
+      <img class="max-w-xs pb-2 rounded-t-lg md:max-w-sm" :src="one.img" alt=""/>
     <div class="p-6 border-t-2 border-t-brownd">
       <h5 class="text-xl font-medium text-gray-900">{{one.title}}</h5>
       <h5 class="text-lg italic font-medium text-gray-900">{{one.date}}</h5>
@@ -20,10 +20,10 @@
     </div>
   </div>
 </div>
-<div class="md:justify-self-center">
+<div class=" md:justify-self-center">
     <div class="relative bg-white rounded-lg shadow-lg h-[580px]">
-        <img src="img/luck-removebg.png" alt="" class="max-w-sm rounded-lg">
-        <div class="absolute inset-0 flex flex-col items-center justify-between p-6 text-black ">
+        <img src="img/luck-removebg.png" alt="" class="max-w-xs rounded-lg md:max-w-sm">
+        <div class="absolute inset-0 flex flex-col items-center justify-between text-black ">
             <h5 class="text-3xl font-medium text-center">Who is the lucky next?</h5>
             <h5 class="text-lg italic font-medium">I hope to see you soon here</h5>
         </div>

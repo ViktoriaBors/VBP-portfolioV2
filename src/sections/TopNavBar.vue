@@ -1,7 +1,7 @@
 <template>
-<div id="topMenu" :class="scY > 50 ? ['w-full mx-0'] : ['w-11/12 rounded-full mx-auto']" class="sticky top-0 z-50 flex items-center justify-between h-12 bg-white shadow-md ">
+<div id="topMenu" :class="scY > 50 ? ['w-full mx-0'] : ['w-11/12 rounded-full mx-auto']" class="sticky top-0 z-50 flex items-center justify-between h-16 bg-white shadow-md ">
             <div class="pl-2">
-              <img src="img/logoNoBg.png" class="w-20 ml-2" alt="">
+            <img src="img/logoNoBg.gif" width="80" class="ml-2">
             </div>
             <div class="pr-2">
             <input id="toggle" type="checkbox" class="relative hidden" v-if="windowWidth <= 768"  />
@@ -38,6 +38,7 @@
 
 <script setup>
 import {ref} from 'vue'
+import Logo from '../components/Logo.vue'
 
 let isOpen = ref(false)
 let scY = ref(null)
