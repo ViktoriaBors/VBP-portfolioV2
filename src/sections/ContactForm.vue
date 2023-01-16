@@ -9,13 +9,23 @@
       <input type="text" name="name" id="name" class="mb-4 bg-gray-50 border border-slate text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="Your Name" required>
       <textarea id="message" name="message" rows="4" class="mb-4 bg-gray-50 border border-slate text-gray-900 text-sm rounded-lg block w-full p-2.5" placeholder="Your Message comes here" required></textarea>
       <BaseButton text="send an email"><input type="submit" ></BaseButton>
+      <div class="flex flex-row items-center justify-start mt-6 md:hidden">
+          <p class="pt-2 ml-1 mr-4 text-base"> Or find me on >> </p>
+          <a href="https://www.linkedin.com/in/viktoria-b-pajuste/"  target="_blank" class="cursor-pointer"> <img src="/img/linkedin.svg" alt="" class="w-6 mr-1 cursor-pointer"> </a>
+          <a href="https://dev.to/viktoriabors" target="_blank" class="cursor-pointer"> <img src="/img/dev-to.svg" alt="" class="w-6 ml-1"> </a>
+        </div>
   </form>
     <div class="hidden mt-4 mr-2 md:flex wrapper">
       <div class="lid one"></div>
       <div class="lid two"></div>
       <div class="envelope"></div>
-      <div class="letter">
+      <div class="flex flex-col justify-center letter">
         <p class="pt-2 text-base font-bold"><span class="mr-2 text-xl">&#8592;</span>Write me there</p>
+        <p class="pt-2 text-base font-bold"><span class="mr-2 text-xl">&#8595;</span>Or find me </p>
+        <div class="flex flex-row justify-center mt-1">
+          <a href="https://www.linkedin.com/in/viktoria-b-pajuste/"  target="_blank" class="cursor-pointer"> <img src="/img/linkedin.svg" alt="" class="w-6 mr-1 cursor-pointer"> </a>
+          <a href="https://dev.to/viktoriabors" target="_blank" class="cursor-pointer"> <img src="/img/dev-to.svg" alt="" class="w-6 ml-1"> </a>
+        </div>
     </div>
     </div>
   </div> 
@@ -106,8 +116,10 @@ defineProps(['text'])
 }
 
 .wrapper:hover .letter {
-  transform: translateY(-50px);
-  transition-delay: 0.5s;
+  transform: translateY(-80px);
+  transition-delay: 0.8s;
+   z-index: 3;
 }
+
 
 </style>

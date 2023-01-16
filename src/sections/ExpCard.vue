@@ -24,8 +24,8 @@
     <div class="relative bg-white rounded-lg shadow-lg h-[580px]">
         <img src="img/luck-removebg.png" alt="" class="max-w-xs rounded-lg md:max-w-sm">
         <div class="absolute inset-0 flex flex-col items-center justify-between text-black ">
-            <h5 class="text-3xl font-medium text-center">Who is the lucky next?</h5>
-            <h5 class="text-lg italic font-medium">I hope to see you soon here</h5>
+            <h5 class="pt-6 text-3xl font-medium text-center">Who is the lucky next?</h5>
+            <h5 class="pb-6 text-lg italic font-medium">I hope to see you soon here</h5>
         </div>
     </div>
 </div>  
