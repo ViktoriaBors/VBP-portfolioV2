@@ -1,5 +1,5 @@
 <template>
-<div class="grid grid-cols-1 gap-4 py-4 min-[800px]:grid-cols-2 justify-items-center">    
+<div class="grid grid-cols-1 gap-4 py-4 md:grid-cols-2 justify-items-center">    
 <div class="md:justify-self-center"  v-for="one in data" :key="one.id">
   <div class="max-w-xs bg-white rounded-lg shadow-lg md:max-w-sm">
       <img class="max-w-xs pb-2 rounded-t-lg md:max-w-sm" :src="one.img" alt=""/>

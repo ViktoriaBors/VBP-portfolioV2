@@ -41,7 +41,7 @@
 </section>
 <section id="experiences" class="relative mt-8 min-[800px]:h-[800px]">
     <div class="vl absolute hidden border-l-2 md:block md:-mt-[40px] xl:-mt-[50px] md:-top-[5px] xl:h-[436px] xl:left-[300px] left-[250px] md:h-[115px] border-greenv" />
-    <hr class="vl hidden 2xl:block absolute h-[2px] top-[386px] w-[1233px] left-[300px] border-none bg-greenv" />
+    <hr class="vl hidden 2xl:block absolute h-[2px] top-[386px] w-[800px] left-[500px] border-none bg-greenv" />
     <h1 class="px-12 py-4 text-xl font-bold">.experiences</h1>
   <ExpCard class="mx-auto max-w-7xl"/>
   <div class="vl absolute hidden border-l-2 md:block md:-mt-[25px] min-[800px]:-mt-[55px] min-[800px]:top-[710px] h-[150px] xl:top-[430px] xl:h-[445px] xl:-mt-[43px] xl:right-[300px] right-[250px] border-greenv" />
@@ -52,10 +52,10 @@
   <h1 class="px-12 pt-2 text-xl font-bold text-right text-black">.projects</h1>
   <ProjectsCard/>
   </div>
-  <div class="vl absolute hidden border-l-2 md:block md:-mt-[55px] min-[800px]:top-[700px] h-[108px] min-[800px]:h-[204px] xl:right-[300px] right-[250px] border-white" />
+  <div class="vl absolute hidden border-l-2 md:block md:-mt-[55px] min-[800px]:top-[700px] h-[200px] xl:right-[300px] right-[250px] border-white" />
 </section>
 <section id="education" class="md:h-[750px] lg:h-[650px] relative">
-  <div class="vl absolute hidden border-l-2 md:block md:-mt-[55px] min-[800px]:top-[0px] h-[100px] min-[800px]:h-[120px] xl:right-[300px] right-[250px] lg:-mt-[65px] border-brownl" />
+  <div class="absolute hidden border-l-2 md:block md:-mt-[55px] min-[800px]:top-[0px] h-[120px] xl:right-[300px] right-[250px] lg:-mt-[65px] border-brownl" />
   <h1 class="px-12 mt-12 text-xl font-bold text-left text-black">.educations</h1>
   <EdCard />
   <div class="vl absolute hidden border-l-2 md:block md:-mt-[15px] min-[800px]:top-[585px] h-[158px] min-[800px]:h-[200px] xl:left-[300px] left-[250px] lg:-mt-[70px] border-brownl" />
