@@ -3,7 +3,7 @@
 <div class="md:justify-self-center"  v-for="one in data" :key="one.id">
   <div class="max-w-xs bg-white rounded-lg shadow-lg md:max-w-sm">
       <img class="max-w-xs pb-2 rounded-t-lg md:max-w-sm" :src="one.img" alt=""/>
-    <div class="p-6 border-t-2 border-t-brownd">
+    <div class="p-6 border-t-2 border-t-greenv">
       <h5 class="text-xl font-medium text-gray-900">{{one.title}}</h5>
       <h5 class="text-lg italic font-medium text-gray-900">{{one.date}}</h5>
       <p class="mb-2 text-sm italic text-gray-900">{{one.skills}}</p>

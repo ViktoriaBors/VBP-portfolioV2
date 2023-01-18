@@ -1,5 +1,5 @@
 <template>
-<div class="grid grid-cols-1 gap-4 py-4 mx-auto md:grid-cols-3 justify-items-center md:gap-2 md:max-w-6xl">    
+<div class="grid grid-cols-1 gap-4 py-4 mx-auto md:grid-cols-3 justify-items-center md:gap-2 md:max-w-7xl">    
 <div v-for="one in data" :key="one.id" class="max-w-sm m-2 bg-white rounded-lg shadow-lg">
   <img :src="one.img" alt="" class="h-[200px] mx-auto"/>
   <div class="p-4">

@@ -2,14 +2,14 @@
 <div>
 <div v-for="project in projects" :key="project.id">
  <div class="flex justify-center py-4 mx-2">
-        <div class="flex flex-col max-w-md bg-white rounded-lg shadow-lg md:max-w-5xl md:flex-row">
+        <div class="flex flex-col max-w-md bg-white rounded-lg shadow-lg md:max-w-7xl md:flex-row">
             <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
              :src="project.img" alt=""
              @click="loadImg"/>
             <div class="flex flex-col justify-center p-6">
                 <h5 class="text-xl font-medium text-gray-900">{{project.title}}</h5>
                 <h5 class="italic font-medium text-gray-900 text-md">{{project.stacks}}</h5>
-                <p v-if="windowWidth > 768" class="pt-4 text-base">
+                <p v-if="windowWidth >= 768" class="pt-4 text-base">
                     {{project.desc}}
                 </p>
                 <p v-if="windowWidth < 768" class="mt-2 mb-4 text-base text-gray-700">

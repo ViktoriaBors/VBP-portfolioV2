@@ -1,13 +1,13 @@
 <template>
   <div class="w-11/12 p-2 mx-auto">
-    <div v-if="windowWidth > 768"
+    <div v-if="windowWidth >= 768"
         class="relative flex flex-col items-center xl:flex-row">
         <div class="relative xl:order-1">
             <img v-for="img in data" :key="img.id" :src= img.src 
-            class="absolute max-w-md xl:max-w-xl max-h-96 grayscale right-10"  
+            class="absolute max-w-md xl:max-w-2xl max-h-96 grayscale right-10"  
             :class="img.class" />
             <img :src="currentImg().src" :key="currentImg().id"
-            class="relative order-1 max-w-md mr-10 cursor-pointer xl:max-w-xl max-h-96 bounce-in" 
+            class="relative order-1 max-w-md mr-10 cursor-pointer xl:max-w-2xl max-h-96 bounce-in" 
             :class="currentImg().class"
             @click="loadImg"
             />

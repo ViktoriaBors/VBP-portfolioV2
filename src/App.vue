@@ -28,22 +28,23 @@
 </section>
 <section id="skills" class="relative mb-12">
   <h1 class="px-12 pt-4 text-xl font-bold">.stacks</h1>
-  <SkillsCard class="max-w-5xl lg:mx-auto"/>
+  <SkillsCard class="max-w-7xl lg:mx-auto"/>
   <div class="vl absolute hidden border-l-2 md:block top-[500px] right-[180px] xl:right-[300px] h-[170px] border-greenv" />
 </section>
 <section id="about" class="relative pb-10 mt-24 bg-greenv md:h-[700px] xl:h-[600px]">
   <div class="vl absolute hidden border-l-2 z-10 md:block top-[0px] md:right-[180px] xl:right-[300px] md:h-[550px] xl:h-[100px] border-white" />
   <div>
   <h1 class="px-12 pt-6 pb-2 text-xl font-bold text-right text-white md:pb-12 md:pt-12">.who am i</h1>
-  <ImgSlider class="max-w-6xl xl:mx-auto" @openModal="open"/>
+  <ImgSlider class="max-w-7xl xl:mx-auto" @openModal="open"/>
   </div>
-  <div class="vl absolute hidden border-l-2 md:block md:top-[620px] xl:top-[400px] xl:h-[205px] xl:left-[300px] left-[250px] md:h-[150px] border-white" />
+  <div class="vl absolute hidden border-l-2 md:block md:top-[620px] min-[800]:h-[150px] xl:top-[400px] xl:h-[205px] xl:left-[300px] left-[250px] md:h-[79px] border-white" />
 </section>
 <section id="experiences" class="relative mt-8 min-[800px]:h-[800px]">
-    <div class="absolute hidden border-l-2 md:block md:-mt-[40px] xl:-mt-[50px] md:top-[0px] xl:h-[125px] xl:left-[300px] left-[250px] md:h-[115px] border-greenv" />
+    <div class="vl absolute hidden border-l-2 md:block md:-mt-[40px] xl:-mt-[50px] md:-top-[5px] xl:h-[436px] xl:left-[300px] left-[250px] md:h-[115px] border-greenv" />
+    <hr class="vl hidden 2xl:block absolute h-[2px] top-[386px] w-[1233px] left-[300px] border-none bg-greenv" />
     <h1 class="px-12 py-4 text-xl font-bold">.experiences</h1>
   <ExpCard class="mx-auto max-w-7xl"/>
-  <div class="vl absolute hidden border-l-2 md:block md:-mt-[25px] min-[800px]:-mt-[55px] min-[800px]:top-[710px] h-[150px] max-[800px]:h-[160px] xl:right-[300px] right-[250px] border-greenv" />
+  <div class="vl absolute hidden border-l-2 md:block md:-mt-[25px] min-[800px]:-mt-[55px] min-[800px]:top-[710px] h-[150px] xl:top-[430px] xl:h-[445px] xl:-mt-[43px] xl:right-[300px] right-[250px] border-greenv" />
 </section>
 <section id="projects" class=" bg-brownl md:h-[850px] relative py-12">
   <div class="vl absolute hidden border-l-2 md:block md:-mt-[45px] min-[800px]:mt-[0px] min-[800px]:top-[0px] h-[170px] min-[800px]:h-[180px] xl:right-[300px] right-[250px] border-white" />
@@ -62,7 +63,7 @@
 <section id="contact" class="relative py-12 bg-brownd">
   <div class="absolute hidden border-l-2 md:block md:top-0 h-[123px] xl:left-[300px] left-[250px] border-white" />
   <h1 class="px-12 py-4 text-xl font-bold text-right text-white">.contact me</h1>
-  <ContactForm class="max-w-6xl xl:mx-auto"/>
+  <ContactForm class="max-w-7xl xl:mx-auto"/>
 </section>
 <div v-if="isShow" style='background-color: rgba(240,240,240,0.8)' class="fixed top-0 left-0 right-0 z-50 flex justify-center w-full h-full overflow-x-hidden overflow-y-auto">
   <Modal @closeModal="close" :img="img"/>
@@ -103,11 +104,11 @@ const closeCv =() => {
    return isShowCv.value = !isShowCv.value
 }
 
-
+/*
 onMounted(()=>{
   swal("Still under Construction!", "Soon ready - Worth to wait", "info");
 })
-
+*/
 </script>
 
 <style scoped>

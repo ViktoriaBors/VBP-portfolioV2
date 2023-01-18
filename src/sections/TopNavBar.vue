@@ -4,14 +4,14 @@
             <img src="img/logoNoBg.gif" width="80" class="ml-2">
             </div>
             <div class="pr-2">
-            <input id="toggle" type="checkbox" class="relative hidden" v-if="windowWidth <= 768"  />
-                  <label for="toggle" class="p-4 cursor-pointer hamburger" v-if="windowWidth <= 768"  @click="isOpen = !isOpen">
+            <input id="toggle" type="checkbox" class="relative hidden" v-if="windowWidth < 768"  />
+                  <label for="toggle" class="p-4 cursor-pointer hamburger" v-if="windowWidth < 768"  @click="isOpen = !isOpen">
                     <div class="top-bun"></div>
                     <div class="meat"></div>
                     <div class="bottom-bun"></div>
                   </label>
             </div>
-            <nav v-if="windowWidth > 768" class="flex flex-row gap-4 bg-white rounded-full">
+            <nav v-if="windowWidth >= 768" class="flex flex-row gap-4 bg-white rounded-full">
                     <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#home">.home</a>
                     <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#skills">.skills</a>
                     <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#about">.who am i</a>
@@ -51,7 +51,7 @@ window.addEventListener('scroll', ()=>{
 
 window.addEventListener("resize", () => {
   windowWidth.value = window.innerWidth
-  if(windowWidth.value > 768){
+  if(windowWidth.value >= 768){
     isOpen.value = false
   }
 });
