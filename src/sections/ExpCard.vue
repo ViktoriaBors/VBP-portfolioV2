@@ -37,7 +37,7 @@ import {ref} from 'vue'
 import ReadMoreButton from '../components/ReadMoreButton.vue'
 
 let data = [
-    {id: 0, isActive: ref(false), title: "Junior Developer", date: "2022.October - Now", desc: "Formula 400 (Hungarian Company) builds web application and software platforms for Insurance Companies. I am responsible to make updates in the product description and implement new products both in the database, on backend side (through webservices) and on frontend (visualize them on the User Interface). The project written in Vue.Js and Node.Js.", img: 'img/coverme-removebg.png', skills: 'JavaScript, Vue Js, Node Js'},
+    {id: 0, isActive: ref(false), title: "Junior Developer", date: "2022.October - Now", desc: "I work at Formula 400, a Hungarian company that builds web apps and software platforms for insurance companies. My job is to update product descriptions and implement new products by working on both the backend and frontend. On the backend, I use web services to make updates and on the frontend, I make sure the new products are visible on the user interface. The project is built using Vue.js and Node.js", img: 'img/coverme-removebg.png', skills: 'JavaScript, Vue Js, Node Js'},
     // {id: 1, isActive: ref(false), title: "Translator (Volunteer)", date: "2023. January - Now", desc: "The Modern JavaScript Tutorial is an incredible site to learn JavaScript. It has been translated to different languages by a group of volunteers, although the Hungarian translation process has slowed down. A group of JavaScript enthusiastic (including me) has started to make a solid plan to start up the translation process again.", img:'img/jsLogo2.jpg', skills: ''}
 ]
 

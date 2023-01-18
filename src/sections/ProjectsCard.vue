@@ -2,7 +2,7 @@
 <div>
 <div v-for="project in projects" :key="project.id">
  <div class="flex justify-center py-4 mx-2">
-        <div class="flex flex-col max-w-md bg-white rounded-lg shadow-lg md:max-w-7xl md:flex-row">
+        <div class="flex flex-col max-w-md bg-white rounded-lg shadow-lg md:max-w-5xl md:flex-row">
             <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
              :src="project.img" alt=""
              @click="loadImg"/>
@@ -32,7 +32,7 @@
   </div>
 </div>
 <div class="text-center">
-<a href="https://github.com/ViktoriaBors" target="_blank"> <BaseButton text="read more on github >>"/></a>
+<a href="https://github.com/ViktoriaBors" target="_blank"> <BaseButton text="see more on github >>"/></a>
 </div>
 </div>
 </template>
@@ -44,8 +44,8 @@ import ReadMoreButton from '../components/ReadMoreButton.vue'
 import BaseButton from '../components/BaseButton.vue'
 
 let projects = [
-    {id:0, isActive: ref(false), title: 'SpaceRock', stacks: 'JavaScript, Node Js, Mongo DB, Vue Js, Tailwind Css', desc: 'JavaScript module exam project. SpaceRock is inspired by ESA SACF. The project is actually a CRUD application mixed with some interesting geological topic about the analogue and simulant samples from the Moon. The user can search in the database and after registration and login the user can add new sample, modify and delete sample. It has a image upload feature as well. Since then, the project has got updated and re-written in Vue Js framework.', linkServer: 'https://spacerockvue.onrender.com/', linkGit: 'https://github.com/ViktoriaBors/SpaceRockVue', img:'img/spacerock1.png' },
-    {id: 1, isActive: ref(false), title: 'Bows Cafe', stacks: 'HTML, CSS, SASS, Bootstrap, Javascript', desc: 'Front end module exam project. Bows Cafe is inspired by Buens Cafe. Buens Cafe is a local LGBT+ gathering place with friendly atmosphere. It is an important topic and therefore I decided to make this static webpage about them.The project reflects my knowledge in the beginning of my journey in webdevelopment.', linkServer: 'https://examprojekt.vercel.app/', linkGit: 'https://github.com/ViktoriaBors/FrontendExamProjekt', img:'img/bows.png'}
+    {id:0, isActive: ref(false), title: 'SpaceRock', stacks: 'JavaScript, Node Js, Mongo DB, Vue Js, Tailwind Css', desc: "I did a JavaScript module exam project called SpaceRock, which was inspired by ESA SACF. It's basically a CRUD app with a cool geological twist - it's all about the analogue and simulant samples from the Moon. Users can search the database, and once logged in, they can add, modify, and delete samples. It even has a feature for uploading images. I've since updated and re-written the project using the Vue.js framework.", linkServer: 'https://spacerockvue.onrender.com/', linkGit: 'https://github.com/ViktoriaBors/SpaceRockVue', img:'img/spacerock1.png' },
+    {id: 1, isActive: ref(false), title: 'Bows Cafe', stacks: 'HTML, CSS, SASS, Bootstrap, Javascript', desc: "I did a front-end module exam project called Bows Cafe, which was inspired by a local LGBT+ gathering place called Buens Cafe. It's an important topic and I wanted to create a static webpage about them. The project shows my early skills in web development and how I started my journey.", linkServer: 'https://examprojekt.vercel.app/', linkGit: 'https://github.com/ViktoriaBors/FrontendExamProjekt', img:'img/bows.png'}
 ]
 
 const isOpen = ref(false)

@@ -1,5 +1,5 @@
 <template> 
-<div class="flex flex-row items-center justify-around">
+<div class="flex flex-row items-center justify-between">
   <form action="https://formsubmit.io/send/viktoria.pajuste@gmail.com" method="POST"
    class="flex-1 w-1/2 p-4 m-4 border-2 border-dashed rounded-lg lg:flex-none border-slate bg-gray ">
     <input name="_formsubmit_id" type="text" style="display:none">

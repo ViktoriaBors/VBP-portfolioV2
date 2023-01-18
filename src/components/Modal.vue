@@ -1,5 +1,5 @@
 <template>
-    <div class="relative max-w-7xl my-28">
+    <div class="relative max-w-5xl my-28">
         <!-- Modal content -->
         <div class="relative flex flex-col text-current bg-white border-none rounded-md shadow-lg outline-none pointer-events-auto bg-clip-padding">
             <!-- Modal header -->              

@@ -1,8 +1,8 @@
 <template>
   <div class="p-6 m-2 rounded-lg bg-gray md:h-[500px]" >
-    <p class="pb-2 font-bold">These are the technologies I use every day to build cool web applications.</p>
-    <p class="px-4"> I am a JavaScript enthusiast with a primary focus on Vue Js. I also have some insight into Node.Js as a backend technology. As a database, I like to use JSON-based databases, like MongoDB.
-   For styling, I am a big fan of Tailwind Css, but also familiar with Bootstrap. Version control? Obviously Git and Github </p>
+    <p class="pb-2 font-bold">I build kick-ass web apps with these tools:</p>
+    <p class="px-4"> So, I'm a self-taught web developer who's all about frontend stuff. I dig using JavaScript, especially with Vue.js. I've got some skills in using Node.js as a backend tool. I'm also a fan of MongoDB as my go-to database, and for styling,
+      I'm all about Tailwind CSS. But I also know my way around Bootstrap. And let's not forget, version control is a must, so I'm all in on Git and Github. </p>
    <div class="flex flex-row flex-wrap items-center justify-center mt-12 md:grid md:grid-cols-6 md:justify-items-center">
       <div class="p-3">
         <img src="img/html-removebg-preview.png" class="max-h-20" alt="HTML 5">

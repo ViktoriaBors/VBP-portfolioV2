@@ -4,10 +4,10 @@
         class="relative flex flex-col items-center xl:flex-row">
         <div class="relative xl:order-1">
             <img v-for="img in data" :key="img.id" :src= img.src 
-            class="absolute max-w-md xl:max-w-2xl max-h-96 grayscale right-10"  
+            class="absolute max-w-md xl:max-w-xl max-h-96 grayscale right-10"  
             :class="img.class" />
             <img :src="currentImg().src" :key="currentImg().id"
-            class="relative order-1 max-w-md mr-10 cursor-pointer xl:max-w-2xl max-h-96 bounce-in" 
+            class="relative order-1 max-w-md mr-10 cursor-pointer xl:max-w-xl max-h-96 bounce-in" 
             :class="currentImg().class"
             @click="loadImg"
             />
@@ -48,10 +48,10 @@ const loadImg = () => {
 }
 
 let data = [
-            {id:1, src: "../img/geo.jpg",head:"Down To Earth", desc:"The environment have always been a big part of me. I have survived many field trips, mapping courses and other extreme assignments. I have always loved to hike on the field or sitting in the lab behind the microscope.", class:"rotate-2"},
-            {id:2, src: "./img/it.jpg", head:"IT works...Why?", desc:"Why? This is the ultimate question for a developer. It can be asked always. Why doesn't it work? Why does it work? Etc. Sometimes a beer and chips would help me to answer these questions. ", class:"rotate-3"},
-            {id:3, src: "./img/family.jpg", head:"Wife, mom, friend...", desc:"... student, employee, chef. This girls has MANY NAMES. I can fulfill multiple roles and do multiple tasks per day.", class:"rotate-6"},
-            {id:4, src: "./img/pol.jpg", head:"Plan C for career - Poledance", desc:"No, seriously... It is a sport that actually can give you muscles and muscle aches. I have done poledance for 2-3 years (before pregnancy) and even won one!", class:"-rotate-6"},
+            {id:1, src: "../img/geo.jpg",head:"Down To Earth", desc: "I'm all about Mother Nature, baby. I've been through some wild stuff - camping trips, field work, you name it. But nothing beats a good hike or chillin' in the lab peeping through a microscope. Basically, I'm a rugged environmentalist.", class:"rotate-2"},
+            {id:2, src: "./img/it.jpg", head:"IT works...Why?", desc:"IT's a mystery, ain't it? As a developer, I'm always asking why? Why isn't this working? Why is it working? You get the idea. Sometimes a cold brew and some chips help me figure it out, but other times it's just a mystery", class:"rotate-3"},
+            {id:3, src: "./img/family.jpg", head:"The girl has many names", desc:"I wear many hats - wife, mom, friend, student, employee, chef. You name it, I do it. I'm a multitasking pro, juggling all my roles like a boss.", class:"rotate-6"},
+            {id:4, src: "./img/pol.jpg", head:"Career plan C? - Poledance", desc:"No, seriously... Don't underestimate it, it's a workout. I was doing it for a couple of years before I got pregnant and even took home a trophy. (No, seriously).", class:"-rotate-6"},
       ]
 
 let currentIndex = ref(0)
