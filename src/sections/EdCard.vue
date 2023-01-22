@@ -1,29 +1,31 @@
 <template>
-<div class="grid grid-cols-1 gap-4 py-4 mx-auto md:grid-cols-3 justify-items-center md:gap-2 md:max-w-7xl">    
-<div v-for="one in data" :key="one.id" class="max-w-sm m-2 bg-white rounded-lg shadow-lg">
-  <img :src="one.img" alt="" class="h-[200px] mx-auto"/>
+<div class="flex flex-col items-center justify-center gap-4 py-4 mx-auto md:flex-row md:gap-2 md:max-w-7xl">    
+<Tilt :options="tiltOpt"  v-for="one in data" :key="one.id" class="max-w-sm m-2 shadow-lg rounded-xl">
+  <img :src="one.img" alt="" class="h-[200px] mx-auto p-2"/>
   <div class="p-4">
       <h5 class="text-xl font-medium text-gray-900">{{one.title}}</h5>
       <h5 class="text-lg italic font-medium text-gray-900">{{one.date}}</h5>
-      <p class="mb-2 text-sm italic text-gray-900">{{one.skills}}</p>
-      <p class="mb-4 text-base text-gray-700">
+      <p class="mb-2 text-sm italic text-gray-900 md:text-base">{{one.skills}}</p>
+      <p class="text-base text-gray-700">
+        <span :key='1'>{{ one.isActive.value ? one.desc.slice(0,150) :  one.desc.slice(0,150)+'...' }}</span> 
         <TransitionGroup name="fade">
-        <span :key='1'>{{ one.isActive.value ? one.desc.slice(0,150) :  one.desc.slice(0,150)+'...' }}</span>
          <span :key='2' v-if= one.isActive.value>{{one.desc.slice(150)}}</span>
         </TransitionGroup>
       </p>
-      <ReadMoreButton class="mt-12 text-sm"
+      <ReadMoreButton class=""
             type="button"
             @click="open(one.id)" :isActive="one.isActive.value"
           />
   </div>
-</div> 
+</Tilt> 
 </div> 
 </template>
 
 <script setup>
 import {ref} from 'vue'
 import ReadMoreButton from '../components/ReadMoreButton.vue'
+import Tilt from 'vanilla-tilt-vue'
+import { tiltOpt } from '../TiltOpt.js'
 
 let data = [
     {id: 0, isActive: ref(false), title: "Environmental Engineering / Geology", date: "Master Degree", desc: "I studied Environmental Engineering with a focus on soil, groundwater, drinking water pollution and wastewater treatment. My geology education gave me a strong foundation in geology and the ability to solve geological problems.", img:'img/eotvos2.jpg', skills: 'Aalborg University / Eotvos Lorand University'},

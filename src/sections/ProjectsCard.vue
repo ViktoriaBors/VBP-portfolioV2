@@ -9,22 +9,22 @@
             <div class="flex flex-col justify-center p-6">
                 <h5 class="text-xl font-medium text-gray-900">{{project.title}}</h5>
                 <h5 class="italic font-medium text-gray-900 text-md">{{project.stacks}}</h5>
-                <p v-if="windowWidth >= 768" class="pt-4 text-base">
+                <p v-if="windowWidth >= 800" class="pt-4 text-base">
                     {{project.desc}}
                 </p>
-                <p v-if="windowWidth < 768" class="mt-2 mb-4 text-base text-gray-700">
+                <p v-if="windowWidth < 800" class="mt-2 text-base text-gray-700">
                     <TransitionGroup name="fade">
                         <span :key='1'>{{ project.isActive.value ? project.desc.slice(0,100) :  project.desc.slice(0,100)+'...' }}</span>
                         <span :key='2' v-if= project.isActive.value>{{project.desc.slice(100)}}</span>
                     </TransitionGroup>
                 </p>
-          <ReadMoreButton class="text-sm"
-            v-if="windowWidth < 768" type="button"
+          <ReadMoreButton class="text-left"
+            v-if="windowWidth < 800" type="button"
             @click="open(project.id)" :isActive="project.isActive.value"
           />
                 <div
-                    class="flex flex-row justify-around mt-4 md:mt-2">
-                    <a :href="project.linkServer" target="_blank"><SecondaryButton text="live server"></SecondaryButton></a>
+                    class="flex flex-row mt-4 ml-1">
+                    <a :href="project.linkServer" target="_blank" class="mr-7"><SecondaryButton text="live server"></SecondaryButton></a>
                     <a :href="project.linkGit" target="_blank"><SecondaryButton text="source code"></SecondaryButton></a> 
                 </div>
             </div>
@@ -32,7 +32,7 @@
   </div>
 </div>
 <div class="text-center">
-<a href="https://github.com/ViktoriaBors" target="_blank"> <BaseButton text="see more on github >>"/></a>
+<a href="https://github.com/ViktoriaBors" target="_blank"> <BaseButton text="see more on github &#187;"/></a>
 </div>
 </div>
 </template>

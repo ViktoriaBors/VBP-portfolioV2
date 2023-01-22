@@ -11,7 +11,7 @@
                     <div class="bottom-bun"></div>
                   </label>
             </div>
-            <nav v-if="windowWidth >= 768" class="flex flex-row gap-4 bg-white rounded-full">
+            <nav v-if="windowWidth >= 768" class="flex flex-row gap-4 bg-white rounded-full text-md lg:text-lg">
                     <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#home">.home</a>
                     <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#skills">.skills</a>
                     <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#about">.who am i</a>
@@ -22,15 +22,15 @@
             </nav>
 </div>
             <Transition name="bounce">
-            <div v-if="isOpen" class="fixed right-0 z-50 w-1/3 text-black">
-                <nav class="flex flex-col h-screen gap-2 p-2 bg-white">
-                    <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#">.home</a>
-                    <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#skills">.skills</a>
-                    <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#about">.who am i</a>
-                    <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#experiences">.experiences</a>
-                    <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#projects">.projects</a>
-                    <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#education">.education</a>
-                    <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#contact">.contact me</a>
+            <div v-if="isOpen" class="fixed right-0 z-50 w-1/2 text-black">
+                <nav class="flex flex-col h-screen p-2 text-xl bg-white">
+                    <a class="p-5 hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#">.home</a>
+                    <a class="p-5 hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#skills">.skills</a>
+                    <a class="p-5 hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#about">.who am i</a>
+                    <a class="p-5 hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#experiences">.experiences</a>
+                    <a class="p-5 hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#projects">.projects</a>
+                    <a class="p-5 hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#education">.education</a>
+                    <a class="p-5 hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#contact">.contact me</a>
                 </nav>
             </div>
             </Transition>

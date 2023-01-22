@@ -1,13 +1,13 @@
 <template>
   <div class="w-11/12 p-2 mx-auto">
-    <div v-if="windowWidth >= 768"
-        class="relative flex flex-col items-center xl:flex-row">
+    <div v-if="windowWidth >= 800"
+        class="relative flex flex-col items-center justify-center xl:flex-row">
         <div class="relative xl:order-1">
             <img v-for="img in data" :key="img.id" :src= img.src 
-            class="absolute max-w-md xl:max-w-2xl max-h-96 grayscale right-10"  
+            class="absolute max-w-2xl max-h-96 grayscale"  
             :class="img.class" />
             <img :src="currentImg().src" :key="currentImg().id"
-            class="relative order-1 max-w-md mr-10 cursor-pointer xl:max-w-2xl max-h-96 bounce-in" 
+            class="relative order-1 max-w-2xl cursor-pointer max-h-96 bounce-in" 
             :class="currentImg().class"
             @click="loadImg"
             />
@@ -18,22 +18,22 @@
                 <p>{{currentImg().desc}}</p>
             </div>
         </div>
-        <span class="absolute inset-y-0 left-0 flex text-lg font-bold cursor-pointer md:mt-28 md:ml-8 xl:-ml-8 xl:mt-0 xl:justify-center xl:items-center sm:text-2xl hover:text-3xl" @click="prevImg">&#10094;</span>
-        <span class="absolute inset-y-0 right-0 flex text-lg font-bold cursor-pointer md:mt-28 md:mr-8 xl:-mr-6 xl:mt-0 xl:justify-center xl:items-center sm:text-2xl hover:text-3xl" @click="nextImg">&#10095;</span>
+        <span class="absolute inset-y-0 left-0 flex text-4xl font-bold text-white cursor-pointer md:mt-28 md:ml-8 xl:-ml-8 xl:mt-0 xl:justify-center xl:items-center" @click="prevImg">&#10094;</span>
+        <span class="absolute inset-y-0 right-0 flex text-4xl font-bold text-white cursor-pointer md:mt-28 md:mr-8 xl:-mr-6 xl:mt-0 xl:justify-center xl:items-center" @click="nextImg">&#10095;</span>
     </div>
-    <div v-if="windowWidth < 768"
+    <div v-if="windowWidth < 800"
          class="flex flex-col items-center justify-center">
          <div class="relative">
             <img :src="currentImg().src"
             class="w-full max-w-xl px-2 mx-auto max-h-96"  
             @click="loadImg"
             />
-            <span class="absolute inset-y-0 left-0 flex items-center justify-center p-4 text-lg font-bold text-black cursor-pointer sm:text-2xl hover:text-3xl" @click="prevImg">&#10094;</span>
-            <span class="absolute inset-y-0 right-0 flex items-center justify-center p-4 text-lg font-bold text-black cursor-pointer sm:text-2xl hover:text-3xl" @click="nextImg">&#10095;</span>
+            <span class="absolute inset-y-0 left-0 flex items-center justify-center p-4 text-4xl font-bold text-white cursor-pointer" @click="prevImg">&#10094;</span>
+            <span class="absolute inset-y-0 right-0 flex items-center justify-center p-4 text-4xl font-bold text-white cursor-pointer" @click="nextImg">&#10095;</span>
          </div>
-            <div class="flex flex-col justify-around w-10/12 p-4 bg-white rounded-b-lg">
-                <p class="text-sm font-bold text-center sm:text-base ">{{currentImg().head}}</p>
-                <p class="text-sm sm:text-base">{{currentImg().desc}}</p>
+            <div class="flex flex-col justify-around w-10/12 p-4 text-base bg-white rounded-b-lg">
+                <p class="font-bold text-center ">{{currentImg().head}}</p>
+                <p class="text-justify">{{currentImg().desc}}</p>
             </div>
     </div>
   </div>
