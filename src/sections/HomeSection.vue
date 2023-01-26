@@ -1,5 +1,5 @@
 <template>
-<div class="flex items-center justify-around mx-8 md:flex-row-reverse">
+<div class="flex items-end justify-around mx-8 md:flex-row-reverse">
     <div class="max-w-5xl">
         <img src="img/profile3.png" alt="" class="hidden md:block sepia">
     </div>

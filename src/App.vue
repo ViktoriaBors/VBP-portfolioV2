@@ -3,29 +3,29 @@
 <TopNavBar/>
 <a href="#" id="top" :class="scY > 30 ? ['fixed'] : ['hidden']">&#8657;</a>
 <section id="home" class="">
-  <HomeSection class="pt-20 pb-12 -mt-16 md:pt-24 md:-mt-40" />
+  <HomeSection class="pt-20 pb-4 -mt-16 md:pb-0 md:pt-24 md:-mt-40" />
 </section>
-<section id="skills" class="mx-auto mb-12 max-w-7xl">
+<section id="skills" class="mx-auto mb-8 md:my-8 max-w-7xl">
   <h1 class="pt-4 ml-3 text-xl font-bold">.stacks</h1>
   <SkillsCard class=""/>
 </section>
-<section id="about" class="pt-5 pb-10 mt-24 bg-greenv">
+<section id="about" class="py-8 mb-4 md:py-16 md:mt-24 bg-greenv">
   <div class="mx-auto max-w-7xl">
-  <h1 class="pb-2 mr-3 text-xl font-bold text-right text-white md:pb-12 md:pt-12">.who am i</h1>
+  <h1 class="py-4 mr-3 text-xl font-bold text-right text-grayl md:pb-8">.who am i</h1>
   <ImgSlider class="" @openModal="open"/>
   </div>
 </section>
-<section id="experiences" class="pb-16 mx-auto mt-8 max-w-7xl">
-    <h1 class="pt-4 ml-3 text-xl font-bold">.experiences</h1>
+<section id="experiences" class="mx-auto md:my-16 max-w-7xl">
+    <h1 class="ml-3 text-xl font-bold">.experiences</h1>
   <ExpCard class=""/>
 </section>
-<section id="projects" class="py-8 bg-brownl">
+<section id="projects" class="py-8 my-4 md:my-8 md:py-16 bg-brownl">
   <div class="mx-auto max-w-7xl">
   <h1 class="pb-2 mr-3 text-xl font-bold text-right text-black">.projects</h1>
   <ProjectsCard/>
   </div>
 </section>
-<section id="education" class="py-12 mx-auto max-w-7xl">
+<section id="education" class="py-4 mx-auto md:my-8 md:py-16 max-w-7xl">
   <h1 class="ml-3 text-xl font-bold text-left text-black">.educations</h1>
   <EdCard />
 </section>
@@ -115,7 +115,7 @@ onMounted(()=>{
 
 @media only screen and (min-width: 800px) {
   #home{
-  background: linear-gradient(110deg, #F0F0F0 55%, #7D5A4B 45%);
+  background: linear-gradient(110deg, #FFFFFF 55%, #7D5A4B 45%);
     }
   }
 

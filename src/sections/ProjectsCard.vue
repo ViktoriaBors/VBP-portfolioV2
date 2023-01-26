@@ -13,10 +13,10 @@
                     {{project.desc}}
                 </p>
                 <p v-if="windowWidth < 800" class="mt-2 text-base text-gray-700">
-                    <TransitionGroup name="fade">
                         <span :key='1'>{{ project.isActive.value ? project.desc.slice(0,100) :  project.desc.slice(0,100)+'...' }}</span>
+                    <Transition name="fade">
                         <span :key='2' v-if= project.isActive.value>{{project.desc.slice(100)}}</span>
-                    </TransitionGroup>
+                    </Transition>
                 </p>
           <ReadMoreButton class="text-left"
             v-if="windowWidth < 800" type="button"
@@ -67,7 +67,7 @@ window.addEventListener("resize", () => {
 <style scoped>
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease-in;
 }
 
 .fade-enter-to,

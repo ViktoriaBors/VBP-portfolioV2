@@ -12,13 +12,13 @@
             @click="loadImg"
             />
         </div>
-        <div class="w-full p-4 bg-white lg:rounded-l-lg">
+        <div class="w-full p-4 bg-grayl lg:rounded-l-lg">
             <div class="flex flex-col justify-around p-6 h-72 sm:h-52">
                 <p class="pb-2 font-bold text-center">{{currentImg().head}}</p>
                 <p>{{currentImg().desc}}</p>
             </div>
         </div>
-        <span class="absolute inset-y-0 left-0 flex text-4xl font-bold text-white cursor-pointer md:mt-28 md:ml-8 xl:-ml-8 xl:mt-0 xl:justify-center xl:items-center" @click="prevImg">&#10094;</span>
+        <span class="absolute inset-y-0 left-0 flex text-4xl font-bold cursor-pointer text-grayl md:mt-28 md:ml-8 xl:-ml-8 xl:mt-0 xl:justify-center xl:items-center" @click="prevImg">&#10094;</span>
         <span class="absolute inset-y-0 right-0 flex text-4xl font-bold text-white cursor-pointer md:mt-28 md:mr-8 xl:-mr-6 xl:mt-0 xl:justify-center xl:items-center" @click="nextImg">&#10095;</span>
     </div>
     <div v-if="windowWidth < 800"

@@ -1,36 +1,34 @@
 <template>
-<div id="topMenu" :class="scY > 50 ? ['w-full mx-0'] : ['w-11/12 rounded-full mx-auto']" class="sticky top-0 z-50 flex items-center justify-between h-16 bg-white shadow-md ">
-            <div class="pl-2">
+<div id="topMenu" :class="scY > 50 && windowWidth > 800 || windowWidth < 800 ? ['w-full mx-0'] : ['w-11/12 rounded-full mx-auto']" class="sticky top-0 flex items-center justify-between h-16 bg-white shadow-md ">
+            <div class="ml-4">
             <img src="img/logoNoBg.gif" width="80" class="ml-2">
             </div>
-            <div class="pr-2">
-            <input id="toggle" type="checkbox" class="relative hidden" v-if="windowWidth < 768"  />
-                  <label for="toggle" class="p-4 cursor-pointer hamburger" v-if="windowWidth < 768"  @click="isOpen = !isOpen">
-                    <div class="top-bun"></div>
-                    <div class="meat"></div>
-                    <div class="bottom-bun"></div>
-                  </label>
-            </div>
-            <nav v-if="windowWidth >= 768" class="flex flex-row gap-4 bg-white rounded-full text-md lg:text-lg">
-                    <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#home">.home</a>
-                    <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#skills">.skills</a>
-                    <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#about">.who am i</a>
-                    <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#experiences">.experiences</a>
-                    <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#projects">.projects</a>
-                    <a class="hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#education">.education</a>
-                    <a class="pr-2 hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#contact">.contact me</a>
+              <div class="mr-6 hamburger"
+              v-if="windowWidth < 800"
+              :class="[{'open' : isOpen}]"
+              @click="isOpen = !isOpen">
+                <div class="hamburger-inner"></div>
+              </div>
+            <nav v-if="windowWidth >= 800" class="flex flex-row gap-6 rounded-full text-md lg:text-lg">
+                    <a class="" href="#home">.home</a>
+                    <a class="" href="#skills">.skills</a>
+                    <a class="" href="#about">.who am i</a>
+                    <a class="" href="#experiences">.experiences</a>
+                    <a class="" href="#projects">.projects</a>
+                    <a class="" href="#education">.education</a>
+                    <a class="mr-4 " href="#contact">.contact me</a>
             </nav>
 </div>
             <Transition name="bounce">
             <div v-if="isOpen" class="fixed right-0 z-50 w-1/2 text-black">
                 <nav class="flex flex-col h-screen p-2 text-xl bg-white">
-                    <a class="p-5 hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#">.home</a>
-                    <a class="p-5 hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#skills">.skills</a>
-                    <a class="p-5 hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#about">.who am i</a>
-                    <a class="p-5 hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#experiences">.experiences</a>
-                    <a class="p-5 hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#projects">.projects</a>
-                    <a class="p-5 hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#education">.education</a>
-                    <a class="p-5 hover:underline decoration-2 underline-offset-2 decoration-greenv hover:text-greenv" href="#contact">.contact me</a>
+                    <a @click="isOpen=false" class="p-3 my-1 sm:p-5 " href="#">.home</a>
+                    <a @click="isOpen=false" class="p-3 my-1 sm:p-5" href="#skills">.skills</a>
+                    <a @click="isOpen=false" class="p-3 my-1 sm:p-5 " href="#about">.who am i</a>
+                    <a @click="isOpen=false" class="p-3 my-1 sm:p-5 " href="#experiences">.experiences</a>
+                    <a @click="isOpen=false" class="p-3 my-1 sm:p-5 " href="#projects">.projects</a>
+                    <a @click="isOpen=false" class="p-3 my-1 sm:p-5 " href="#education">.education</a>
+                    <a @click="isOpen=false" class="p-3 my-1 sm:p-5 " href="#contact">.contact me</a>
                 </nav>
             </div>
             </Transition>
@@ -51,7 +49,7 @@ window.addEventListener('scroll', ()=>{
 
 window.addEventListener("resize", () => {
   windowWidth.value = window.innerWidth
-  if(windowWidth.value >= 768){
+  if(windowWidth.value >= 800){
     isOpen.value = false
   }
 });
@@ -92,41 +90,88 @@ window.addEventListener("resize", () => {
   opacity: 0
 }
 
-/**
-  Hamburger
-**/
+#topMenu{
+  z-index: 5000;
+}
+
+/* Hamburger Menu */
 .hamburger {
-  z-index: 5;
-}
-
-.hamburger div {
+  cursor: pointer;
+  display: inline-block;
+  padding: 15px;
   position: relative;
-  width: 2rem;
-  height: 3px;
-  border-radius: 3px;
-  background-color: #000000;
-  margin-top: 4px;
-  transition: all 0.3s ease-in-out;
-}
-/**
-Animations
-**/
-#toggle:checked + .hamburger .top-bun {
-  transform: rotate(-45deg);
-  margin-top: 25px;
-}
-#toggle:checked + .hamburger .bottom-bun {
-  opacity: 0;
-  transform: rotate(45deg);
-}
-#toggle:checked + .hamburger .meat {
-  transform: rotate(45deg);
-  margin-top: -7px;
+  width: 40px;
 }
 
-#toggle:checked + .hamburger + .nav {
+.hamburger-inner {
+  background-color: black;
+  height: 4px;
+  position: absolute;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.hamburger-inner::before, .hamburger-inner::after {
+  background-color: black;
+  content: "";
+  height: 4px;
+  position: absolute;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.hamburger-inner::before {
+  top: -10px;
+}
+
+.hamburger-inner::after {
+  top: 10px;
+}
+
+.hamburger.open .hamburger-inner {
+  transform: rotate(45deg);
+}
+
+.hamburger.open .hamburger-inner::before {
+  transform: rotate(90deg);
   top: 0;
-  transform: scale(1);
+}
+
+.hamburger.open .hamburger-inner::after {
+  transform: rotate(90deg);
+  top: 0;
+}
+
+/* Nav animation */
+nav a:after,
+nav a:before {
+  content: "";
+  width: 0%;
+  display: block;
+  height: 1px;
+  transition: all 0.3s ease;
+  margin-top: 0px;
+}
+
+nav a:after {
+  bottom: 25%;
+}
+
+nav a:before {
+  top: 25%;
+}
+
+nav a:hover::after {
+  width: 100%;
+  height: 1px;
+  bottom: 25%;
+  background-color:#50AB65;
+}
+nav a:hover::before {
+  width: 100%;
+  height: 1px;
+  top: 25%;
+  background-color: #50AB65;
 }
 
 </style>

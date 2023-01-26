@@ -2,13 +2,18 @@
 module.exports = {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        'lg': '5px 10px 15px 5px rgb(0 0 0 / 0.1), 5px 4px 6px 5px rgb(0 0 0 / 0.1)',
+      }
+    },
     colors: {
       'greenv': '#50AB65',
       'brownl': '#E3D7CB',
       'brownd': '#7D5A4B',
       'gray': '#ECEBE4',
-      'white': '#F0F0F0',
+      'grayl': '#F0F0F0',
+      'white': '#FFFFFF',
       'slate': '#cbd5e1',
       'black': '#000000',
       'blue': '#2A809B'
