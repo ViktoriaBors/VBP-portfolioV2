@@ -1,35 +1,43 @@
 <template>
 <div>
 <TopNavBar/>
-<a href="#" id="top" :class="scY > 30 ? ['fixed'] : ['hidden']">&#8657;</a>
+<a href="#" class="fixed z-50 flex items-center justify-center w-10 h-10 p-4 bg-white rounded-full shadow-lg bottom-1 right-1" :class="scY > 30 ? ['fixed'] : ['hidden']">
+<span href="#" id="top" class="" >&#8657;</span>
+</a>
 <section id="home" class="">
   <HomeSection class="pt-20 pb-4 -mt-16 md:pb-0 md:pt-24 md:-mt-40" />
 </section>
-<section id="skills" class="mx-auto mb-8 md:my-8 max-w-7xl">
-  <h1 class="pt-4 ml-3 text-xl font-bold">.stacks</h1>
-  <SkillsCard class=""/>
-</section>
-<section id="about" class="py-8 mb-4 md:py-16 md:mt-24 bg-greenv">
-  <div class="mx-auto max-w-7xl">
-  <h1 class="py-4 mr-3 text-xl font-bold text-right text-grayl md:pb-8">.who am i</h1>
-  <ImgSlider class="" @openModal="open"/>
+<section id="skills" class="flex items-center justify-center pt-6 -mb-8 pb-28 dark:bg-blackDark">
+  <div>
+  <h1 class="pt-8 pb-8 ml-3 text-xl font-bold dark:text-grayl">.stacks</h1>
+  <SkillsCard class="max-w-7xl"/>
   </div>
 </section>
-<section id="experiences" class="mx-auto md:my-16 max-w-7xl">
-    <h1 class="ml-3 text-xl font-bold">.experiences</h1>
-  <ExpCard class=""/>
-</section>
-<section id="projects" class="py-8 my-4 md:my-8 md:py-16 bg-brownl">
+<section id="about" class="py-8 md:py-24 bg-greenv dark:bg-greenBlackDark">
   <div class="mx-auto max-w-7xl">
-  <h1 class="pb-2 mr-3 text-xl font-bold text-right text-black">.projects</h1>
+  <h1 class="py-4 mb-4 mr-3 text-xl font-bold text-right text-grayl md:pb-8">.who am i</h1>
+  <ImgSlider class="pb-8" @openModal="open"/>
+  </div>
+</section>
+<section id="experiences" class="pt-8 pb-32 -mt-8 -mb-24 dark:bg-deepBlackDark dark:text-grayl">
+  <div class="mx-auto max-w-7xl">
+  <h1 class="pt-8 pb-8 ml-3 text-xl font-bold md:ml-6">.experiences</h1>
+  <ExpCard class="max-w-7xl"/>
+  </div>
+</section>
+<section id="projects" class="py-8 my-4 md:my-8 md:py-16 bg-brownl dark:bg-greengrayDark">
+  <div class="mx-auto max-w-7xl">
+  <h1 class="pb-2 mr-3 text-xl font-bold text-right text-black dark:text-grayl">.projects</h1>
   <ProjectsCard/>
   </div>
 </section>
-<section id="education" class="py-4 mx-auto md:my-8 md:py-16 max-w-7xl">
-  <h1 class="ml-3 text-xl font-bold text-left text-black">.educations</h1>
+<section id="education" class="pb-16 -mt-16 pt-28 dark:bg-deepBlackDark">
+  <div class="mx-auto max-w-7xl">
+  <h1 class="pt-4 pb-8 ml-3 text-xl font-bold text-left text-black dark:text-grayl">.educations</h1>
   <EdCard />
+  </div>
 </section>
-<section id="contact" class="bg-brownd">
+<section id="contact" class="bg-brownd dark:bg-greengrayDark dark:text-grayl">
   <div class="py-8 max-w-7xl xl:mx-auto">
   <h1 class="mr-3 text-xl font-bold text-right text-white">.contact me</h1>
   <ContactForm class=""/>
@@ -84,7 +92,7 @@ onMounted(()=>{
 </script>
 
 <style scoped>
-#home{
+#home {
   background-color: #7D5A4B;
 }
 #about{
@@ -99,24 +107,11 @@ onMounted(()=>{
 #projects>div{
   transform: skewY(2deg)
 }
-#top{
-  position: fixed;
-  right: 15px;
-  bottom: 15px;
-  padding: 1rem;
-  background-color:#ffffff;
-  color:#000000;
-  font-size: 20px;
-  font-weight: 900;
-  border-radius: 50%;
-  z-index: 50;
-  box-shadow:#F0F0F0 1px 1px 2px;
-}
+
 
 @media only screen and (min-width: 800px) {
   #home{
   background: linear-gradient(110deg, #FFFFFF 55%, #7D5A4B 45%);
     }
   }
-
 </style>

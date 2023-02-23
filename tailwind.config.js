@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  darkMode: 'class',
   theme: {
     extend: {
       boxShadow: {
@@ -16,7 +17,13 @@ module.exports = {
       'white': '#FFFFFF',
       'slate': '#cbd5e1',
       'black': '#000000',
-      'blue': '#2A809B'
+      'blue': '#2A809B',
+      'blackDark' : '#00161B',
+      'blueDark': '#1E2C2E0',
+      'deepBlackDark': '#1E1E1E',
+      'cardDark': '#1D3543',
+      'greenBlackDark': "#1E2C2E",
+      'greengrayDark': '#152E33'
     },
     screens: {
       'sm': '640px',

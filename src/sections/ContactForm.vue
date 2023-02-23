@@ -1,7 +1,7 @@
 <template> 
 <div class="flex flex-row items-center justify-between">
   <form action="https://formsubmit.io/send/viktoria.pajuste@gmail.com" method="POST"
-   class="flex-1 w-1/2 p-4 m-4 border-2 border-dashed rounded-lg lg:flex-none border-slate bg-gray ">
+   class="flex-1 w-1/2 p-4 m-4 border-2 border-dashed rounded-lg lg:flex-none border-slate bg-gray dark:bg-cardDark dark:border-[#50AB65]">
     <input name="_formsubmit_id" type="text" style="display:none">
     <input name="_redirect" type="hidden" id="name" value="https://www.viktoria-pajuste.hu/#contact">
     <h2 class="mb-2 text-lg">Send me an email</h2>
@@ -11,8 +11,8 @@
       <BaseButton text="send an email &#187;"><input type="submit" ></BaseButton>
           <p class="pt-2 ml-1 mr-4 text-base"> Or find me on &#187;</p>
           <div class="flex flex-row items-center mt-1 ml-1">
-          <a href="https://www.linkedin.com/in/viktoria-b-pajuste/"  target="_blank" class="cursor-pointer "> <img src="/img/linkedin.svg" alt="" class="w-12 ml-0 cursor-pointer"> </a>
-          <a href="https://dev.to/viktoriabors" target="_blank" class="cursor-pointer"> <img src="/img/dev-to.svg" alt="" class="w-12 ml-1"> </a>
+          <a href="https://www.linkedin.com/in/viktoria-b-pajuste/"  target="_blank" class="cursor-pointer "> <img src="/img/linkedin.svg" alt="Linkedin profile" class="w-12 ml-0 cursor-pointer"> </a>
+          <a href="https://dev.to/viktoriabors" target="_blank" class="cursor-pointer"> <img src="/img/dev-to.svg" alt="Dev.to profile" class="w-12 ml-1 cursor-pointer"> </a>
           </div>
   </form>
     <div class="hidden mt-4 mr-2 md:flex wrapper">

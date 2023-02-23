@@ -2,7 +2,7 @@
 <div>
 <div v-for="project in projects" :key="project.id">
  <div class="flex justify-center py-4 mx-2">
-        <div class="flex flex-col max-w-md bg-white rounded-lg shadow-lg md:max-w-7xl md:flex-row">
+        <div class="flex flex-col max-w-md bg-white rounded-lg shadow-lg md:max-w-7xl md:flex-row dark:bg-cardDark dark:shadow-lg dark:text-grayl">
             <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-l-lg"
              :src="project.img" alt=""
              @click="loadImg"/>

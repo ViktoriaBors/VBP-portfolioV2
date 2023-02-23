@@ -1,7 +1,7 @@
 <template>
 <div class="flex flex-col items-center justify-around gap-4 py-4 mx-auto md:flex-row">    
-<TiltBase v-for="one in data" :key="one.id" class="max-w-sm m-2 shadow-lg rounded-xl">
-  <img :src="one.img" alt="" class="h-[200px] mx-auto p-2"/>
+<TiltBase v-for="one in data" :key="one.id" class="max-w-sm m-2 shadow-lg rounded-xl dark:bg-cardDark dark:text-grayl dark:shadow-lg">
+  <img :src="one.img" alt="" class="mx-auto rounded-t-lg dark:grayscale"/>
   <div class="p-4">
       <h5 class="text-xl font-medium text-gray-900">{{one.title}}</h5>
       <h5 class="text-lg italic font-medium text-gray-900">{{one.date}}</h5>
