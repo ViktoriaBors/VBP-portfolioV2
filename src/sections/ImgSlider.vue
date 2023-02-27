@@ -7,7 +7,7 @@
             class="absolute max-w-2xl max-h-96 grayscale"  
             :class="img.class" />
             <img :src="currentImg().src" :key="currentImg().id" :alt="currentImg().altText"
-            class="relative order-1 max-w-2xl cursor-pointer max-h-96 bounce-in" 
+            class="relative order-1 max-w-2xl cursor-pointer max-h-96 bounce-in dark:grayscale" 
             :class="currentImg().class"
             @click="loadImg"
             />
@@ -25,7 +25,7 @@
          class="flex flex-col items-center justify-center">
          <div class="relative">
             <img :src="currentImg().src" :alt="currentImg().altText"
-            class="w-full max-w-xl px-2 mx-auto max-h-96"  
+            class="w-full max-w-xl px-2 mx-auto max-h-96 dark:grayscale"  
             @click="loadImg"
             />
             <span class="absolute inset-y-0 left-0 flex items-center justify-center p-4 text-4xl font-bold text-white cursor-pointer" @click="prevImg">&#10094;</span>

@@ -2,7 +2,7 @@
 <div class="grid grid-cols-1 my-2 sm:px-4 justify-items-center md:flex md:flex-row">
 <TiltBase class=""  v-for="one in data" :key="one.id">
   <div class="max-w-xs shadow-lg lg:max-w-sm rounded-xl dark:bg-cardDark">
-    <img class="max-w-xs p-4 lg:max-w-sm rounded-t-xl" :src="one.img" alt=""/>
+    <img class="max-w-xs p-4 lg:max-w-sm rounded-t-xl dark:grayscale" :src="one.img" alt=""/>
     <div class="p-6 border-t-2 border-t-greenv">
       <h5 class="text-xl font-medium text-gray-900">{{one.title}}</h5>
       <h5 class="text-lg italic font-medium text-gray-900">{{one.date}}</h5>

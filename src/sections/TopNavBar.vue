@@ -7,7 +7,7 @@
             <div class="order-2 mb-4 mr-2 md:order-3">
               <input type="checkbox" id="toggle" @click="toggleDarkMode"/>
               <label for="toggle" class="text-xl bg-white text-blackDark dark:bg-blackDark dark:text-grayl">
-              {{isDark ? '&#9783;' : '&#9781;'}}
+                <img :src="isDark ? soil : water" :class="isDark ? 'rotate-180' : ''">            
               </label>
             </div>  
             <div class="order-3 mr-6 hamburger"
@@ -44,6 +44,8 @@
 <script setup>
 import {onMounted, ref, watch} from 'vue'
 import Logo from '../components/Logo.vue'
+import soil from '../assets/soil.svg'
+import water from '../assets/water.svg'
 
 let isOpen = ref(false)
 let scY = ref(null)
@@ -74,6 +76,7 @@ window.addEventListener("resize", () => {
 });
 
 let isDark = ref(false)
+let isCheckedDark = ref(false)
 
 onMounted( ()=> {
   if(localStorage.getItem('darkMode') === 'true'){
@@ -88,6 +91,7 @@ onMounted( ()=> {
 })
 
 const toggleDarkMode = () => {
+  isCheckedDark.value = !isCheckedDark.value;
   switch(localStorage.getItem('darkMode')){
     case null:
       isDark.value = true
@@ -243,7 +247,7 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:checked + label {
-	transform: rotate(180deg);
+	transform: rotate(360deg);
 }
 
 label {
