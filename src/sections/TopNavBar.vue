@@ -4,10 +4,10 @@
             <img src="img/logoNoBg.gif" width="100" class="" alt="lab glass connecting to web">
             <p class="text-xs font-bold leading-tight uppercase md:ml-4 ">From Lab to Web</p>
             </div>
-            <div class="order-2 mb-4 mr-2 md:order-3">
-              <input type="checkbox" id="toggle" @click="toggleDarkMode"/>
-              <label for="toggle" class="text-xl bg-white text-blackDark dark:bg-blackDark dark:text-grayl">
-                <img :src="isDark ? soil : water" :class="isDark ? 'rotate-180' : ''">            
+            <div class="relative order-2 mb-4 mr-2 md:order-3">
+              <input type="checkbox" id="toggle" @click="toggleDarkMode" class="md:absolute -top-3 right-5" />
+              <label for="toggle" class="text-xl bg-white -top-3 md:absolute right-5 text-blackDark dark:bg-blackDark dark:text-grayl">
+                <img :src="isDark ? soil : water" :class="isDark ? 'rotate-180' : ''" class='p-1'>            
               </label>
             </div>  
             <div class="order-3 mr-6 hamburger"
@@ -16,12 +16,13 @@
               @click="isOpen = !isOpen">
                 <div class="hamburger-inner"></div>
             </div>
-            <nav v-if="windowWidth >= 800" class="flex flex-row order-2 gap-6 rounded-full text-md lg:text-lg">
+            <nav v-if="windowWidth >= 800" class="flex flex-row flex-wrap justify-center order-2 max-w-sm gap-6 rounded-full lg:flex-nowrap lg:max-w-none text-md lg:text-lg">
                     <a class="" href="#home">.home</a>
                     <a class="" href="#skills">.skills</a>
                     <a class="" href="#about">.who am i</a>
                     <a class="" href="#experiences">.experiences</a>
                     <a class="" href="#projects">.projects</a>
+                     <a class="" href="#blog">.blog</a>
                     <a class="" href="#education">.education</a>
                     <a class="mr-4 " href="#contact">.contact me</a>
             </nav>
@@ -29,13 +30,14 @@
             <Transition name="bounce">
             <div v-if="isOpen" class="fixed right-0 z-50 w-1/2 text-black">
                 <nav class="flex flex-col h-screen p-2 overflow-auto text-xl bg-white">
-                    <a @click="isOpen=false" class="p-3 my-1 sm:p-5 " href="#">.home</a>
-                    <a @click="isOpen=false" class="p-3 my-1 sm:p-5" href="#skills">.skills</a>
-                    <a @click="isOpen=false" class="p-3 my-1 sm:p-5 " href="#about">.who am i</a>
-                    <a @click="isOpen=false" class="p-3 my-1 sm:p-5 " href="#experiences">.experiences</a>
-                    <a @click="isOpen=false" class="p-3 my-1 sm:p-5 " href="#projects">.projects</a>
-                    <a @click="isOpen=false" class="p-3 my-1 sm:p-5 " href="#education">.education</a>
-                    <a @click="isOpen=false" class="p-3 my-1 sm:p-5 " href="#contact">.contact me</a>
+                    <a @click="isOpen=false" class="p-2 my-1 sm:p-5 " href="#">.home</a>
+                    <a @click="isOpen=false" class="p-2 my-1 sm:p-5" href="#skills">.skills</a>
+                    <a @click="isOpen=false" class="p-2 my-1 sm:p-5 " href="#about">.who am i</a>
+                    <a @click="isOpen=false" class="p-2 my-1 sm:p-5 " href="#experiences">.experiences</a>
+                    <a @click="isOpen=false" class="p-2 my-1 sm:p-5 " href="#projects">.projects</a>
+                    <a @click="isOpen=false" class="p-2 my-1 sm:p-5 " href="#blog">.blog</a>
+                    <a @click="isOpen=false" class="p-2 my-1 sm:p-5 " href="#education">.education</a>
+                    <a @click="isOpen=false" class="p-2 my-1 sm:p-5 " href="#contact">.contact me</a>
                 </nav>
             </div>
             </Transition>
@@ -253,10 +255,11 @@ input[type="checkbox"]:checked + label {
 label {
 	display: flex;
   justify-content: center;
-	width: 60px;
-	height: 30px;
+	width: 50px;
+	height: 50px;
+  padding: 5px;
 	border: 1px solid;
-	border-radius: 99em;
+  border-radius: 50%;
 	transition: transform .50s ease-in-out;
 	cursor: pointer;
 }

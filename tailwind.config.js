@@ -32,7 +32,7 @@ module.exports = {
       'md': '800px',
       // => @media (min-width: 800px) { ... }
 
-      'lg': '1024px',
+      'lg': '1160px',
       // => @media (min-width: 1024px) { ... }
 
       'xl': '1280px',

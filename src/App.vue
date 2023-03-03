@@ -31,15 +31,21 @@
   <ProjectsCard/>
   </div>
 </section>
+<section id="blog" class="pb-8 -mt-8 bg-greenv dark:bg-blackDark">
+  <div class="pt-8 pb-2 mx-auto mt-8 md:pt-16 md:pb-2 max-w-7xl">
+      <h1 class="ml-3 text-xl font-bold text-left md:pb-2 text-grayl pt- dark:text-grayl">.blog</h1>
+      <BlogCard/>
+  </div>
+</section>
 <section id="education" class="pb-16 -mt-16 pt-28 dark:bg-deepBlackDark">
   <div class="mx-auto max-w-7xl">
-  <h1 class="pt-4 pb-8 ml-3 text-xl font-bold text-left text-black dark:text-grayl">.educations</h1>
+  <h1 class="pt-4 pb-8 mr-3 text-xl font-bold text-right text-black dark:text-grayl">.educations</h1>
   <EdCard />
   </div>
 </section>
 <section id="contact" class="bg-brownd dark:bg-greengrayDark dark:text-grayl">
   <div class="py-8 max-w-7xl xl:mx-auto">
-  <h1 class="mr-3 text-xl font-bold text-right text-white">.contact me</h1>
+  <h1 class="ml-3 text-xl font-bold text-left text-white">.contact me</h1>
   <ContactForm class=""/>
   </div>
 </section>
@@ -56,6 +62,7 @@ import TopNavBar from './sections/TopNavBar.vue';
 import ImgSlider from './sections/ImgSlider.vue';
 import ExpCard from './sections/ExpCard.vue'
 import EdCard from './sections/EdCard.vue'
+import BlogCard from './sections/BlogCard.vue'
 import ProjectsCard from './sections/ProjectsCard.vue'
 import ContactForm from './sections/ContactForm.vue'
 import SkillsCard from './sections/SkillsCard.vue'
@@ -98,6 +105,9 @@ onMounted(()=>{
 #about{
   transform: skewY(2deg)
 }
+#blog {
+  transform: skewY(-2deg);
+}
 #about>div{
    transform: skewY(-2deg)
 }
@@ -105,6 +115,9 @@ onMounted(()=>{
   transform: skewY(-2deg)
 }
 #projects>div{
+  transform: skewY(2deg)
+}
+#blog>div{
   transform: skewY(2deg)
 }
 

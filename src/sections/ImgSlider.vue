@@ -12,7 +12,7 @@
             @click="loadImg"
             />
         </div>
-        <div class="w-full p-4 dark:shadow-lg bg-grayl lg:rounded-l-lg dark:bg-cardDark dark:text-grayl">
+        <div class="w-full p-4 dark:shadow-lg bg-grayl lg:rounded-lg dark:bg-cardDark dark:text-grayl">
             <div class="flex flex-col justify-around p-6 h-72 sm:h-52">
                 <p class="pb-2 font-bold text-center">{{currentImg().head}}</p>
                 <p>{{currentImg().desc}}</p>
