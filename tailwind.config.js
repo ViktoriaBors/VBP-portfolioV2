@@ -6,24 +6,25 @@ module.exports = {
     extend: {
       boxShadow: {
         'lg': '5px 10px 15px 5px rgb(0 0 0 / 0.1), 5px 4px 6px 5px rgb(0 0 0 / 0.1)',
-      }
-    },
-    colors: {
-      'greenv': '#50AB65',
-      'brownl': '#E3D7CB',
-      'brownd': '#7D5A4B',
-      'gray': '#ECEBE4',
-      'grayl': '#F0F0F0',
-      'white': '#FFFFFF',
-      'slate': '#cbd5e1',
-      'black': '#000000',
-      'blue': '#2A809B',
-      'blackDark' : '#00161B',
-      'blueDark': '#1E2C2E0',
-      'deepBlackDark': '#1E1E1E',
-      'cardDark': '#1D3543',
-      'greenBlackDark': "#1E2C2E",
-      'greengrayDark': '#152E33'
+      },
+      colors: {
+        'greenv': '#50AB65',
+        'brownl': '#E3D7CB',
+        'brownd': '#7D5A4B',
+        'gray': '#ECEBE4',
+        'grayl': '#F0F0F0',
+        'white': '#FFFFFF',
+        'slate': '#cbd5e1',
+        'black': '#000000',
+        'blue': '#2A809B',
+        'blackDark' : '#00161B',
+        'blueDark': '#1E2C2E0',
+        'deepBlackDark': '#1E1E1E',
+        'cardDark': '#1D3543',
+        'greenBlackDark': "#1E2C2E",
+        'greengrayDark': '#152E33',
+        'slate': '#cbd5e1'
+      },
     },
     screens: {
       'sm': '640px',

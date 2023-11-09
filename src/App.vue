@@ -13,13 +13,13 @@
   <SkillsCard class="max-w-7xl"/>
   </div>
 </section>
-<section id="about" class="py-8 md:py-24 bg-greenv dark:bg-greenBlackDark">
+<section id="about" class="py-8 -mt-12 md:py-24 bg-greenv dark:bg-greenBlackDark">
   <div class="mx-auto max-w-7xl">
   <h1 class="py-4 mb-4 mr-3 text-xl font-bold text-right text-grayl md:pb-8">.who am i</h1>
   <ImgSlider class="pb-8" @openModal="open"/>
   </div>
 </section>
-<section id="experiences" class="pt-8 pb-32 -mt-8 -mb-24 dark:bg-deepBlackDark dark:text-grayl">
+<section id="experiences" class="pt-8 pb-32 -mt-12 -mb-24 dark:bg-deepBlackDark dark:text-grayl">
   <div class="mx-auto max-w-7xl">
   <h1 class="pt-8 pb-8 ml-3 text-xl font-bold md:ml-6">.experiences</h1>
   <ExpCard class="max-w-7xl"/>
@@ -31,20 +31,20 @@
   <ProjectsCard/>
   </div>
 </section>
-<section id="blog" class="pb-8 -mt-8 bg-greenv dark:bg-blackDark">
+<section id="blog" class="py-16 pb-48 -mt-8 dark:bg-deepBlackDark dark:text-grayl">
   <div class="pt-8 pb-2 mx-auto mt-8 md:pt-16 md:pb-2 max-w-7xl">
-      <h1 class="ml-3 text-xl font-bold text-left md:pb-2 text-grayl pt- dark:text-grayl">.blog</h1>
+      <h1 class="ml-3 text-xl font-bold text-left md:pb-2">.blog</h1>
       <BlogCard/>
   </div>
 </section>
-<section id="education" class="pb-16 -mt-16 pt-28 dark:bg-deepBlackDark">
-  <div class="mx-auto max-w-7xl">
+<section id="education" class="pt-16 pb-8 -mt-24 bg-brownl dark:bg-greengrayDark">
+  <div class="pb-8 mx-auto max-w-7xl">
   <h1 class="pt-4 pb-8 mr-3 text-xl font-bold text-right text-black dark:text-grayl">.educations</h1>
   <EdCard />
   </div>
 </section>
-<section id="contact" class="bg-brownd dark:bg-greengrayDark dark:text-grayl">
-  <div class="py-8 max-w-7xl xl:mx-auto">
+<section id="contact" class="pt-4 -mt-12 bg-brownd dark:bg-black dark:text-grayl">
+  <div class="py-10 max-w-7xl xl:mx-auto">
   <h1 class="ml-3 text-xl font-bold text-left text-white">.contact me</h1>
   <ContactForm class=""/>
   </div>
@@ -91,11 +91,11 @@ window.onscroll = ()=>{
   scY.value = window.scrollY
 }
 
-
+/*
 onMounted(()=>{
   swal("Hold on tight, this site is a work in progress!", "Check back regularly for a shiny new updates!", "info");
 })
-
+*/
 </script>
 
 <style scoped>
@@ -108,6 +108,9 @@ onMounted(()=>{
 #blog {
   transform: skewY(-2deg);
 }
+#education {
+  transform: skewY(2deg);
+}
 #about>div{
    transform: skewY(-2deg)
 }
@@ -119,6 +122,9 @@ onMounted(()=>{
 }
 #blog>div{
   transform: skewY(2deg)
+}
+#education>div{
+  transform: skewY(-2deg)
 }
 
 

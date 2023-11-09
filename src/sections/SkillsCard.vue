@@ -41,6 +41,22 @@
         <p class="mt-2">MongoDB</p>
       </div>
       <div class="flex flex-col items-center justify-center p-3">
+        <img src="img/php.png" class="h-12 md:h-20" alt="PHP">
+        <p class="mt-2">PHP</p>
+      </div>
+      <div class="flex flex-col items-center justify-center p-3">
+        <img src="img/mysql.png" class="h-12 md:h-20" alt="SQL">
+        <p class="mt-2">MySQL</p>
+      </div>
+      <div class="flex flex-col items-center justify-center p-3">
+        <img src="img/csharp-original.svg" class="h-12 md:h-20" alt="SQL">
+        <p class="mt-2">C#</p>
+      </div>
+      <div class="flex flex-col items-center justify-center p-3">
+        <img src="img/delphi-logo.png" class="h-12 md:h-20" alt="SQL">
+        <p class="mt-2">Delphi</p>
+      </div>
+      <div class="flex flex-col items-center justify-center p-3">
         <img src="img/responsive-removebg-preview.png" class="h-12 md:h-20" alt="Responsive design">
         <p class="mt-2">Responsive<br>Webdesign</p>
       </div>

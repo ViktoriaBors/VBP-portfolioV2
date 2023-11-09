@@ -18,10 +18,10 @@
                         <span :key='2' v-if= project.isActive.value>{{project.desc.slice(100)}}</span>
                     </Transition>
                 </p>
-          <ReadMoreButton class="text-left"
-            v-if="windowWidth < 800" type="button"
-            @click="open(project.id)" :isActive="project.isActive.value"
-          />
+                <ReadMoreButton class="text-left"
+                  v-if="windowWidth < 800" type="button"
+                  @click="open(project.id)" :isActive="project.isActive.value"
+                />
                 <div
                     class="flex flex-row mt-4 ml-1">
                     <a :href="project.linkServer" target="_blank" class="mr-7"><SecondaryButton text="live server"></SecondaryButton></a>
@@ -31,7 +31,7 @@
         </div>
   </div>
 </div>
-<div class="text-center">
+<div class="pb-6 text-center">
 <a href="https://github.com/ViktoriaBors" target="_blank"> <BaseButton text="see more on github &#187;"/></a>
 </div>
 </div>
@@ -44,8 +44,9 @@ import ReadMoreButton from '../components/ReadMoreButton.vue'
 import BaseButton from '../components/BaseButton.vue'
 
 let projects = [
-    {id:0, isActive: ref(false), title: 'SpaceRock', stacks: 'JavaScript, Node Js, Mongo DB, Vue Js, Tailwind Css', desc: "I did a JavaScript module exam project called SpaceRock, which was inspired by ESA SACF. It's basically a CRUD app with a cool geological twist - it's all about the analogue and simulant samples from the Moon. Users can search the database, and once logged in, they can add, modify, and delete samples. It even has a feature for uploading images. I've since updated and re-written the project using the Vue.js framework.", linkServer: 'https://spacerockvue.onrender.com/', linkGit: 'https://github.com/ViktoriaBors/SpaceRockVue', img:'img/spacerock1.png' },
-    {id: 1, isActive: ref(false), title: 'Bows Cafe', stacks: 'HTML, CSS, SASS, Bootstrap, Javascript', desc: "I did a front-end module exam project called Bows Cafe, which was inspired by a local LGBT+ gathering place called Buens Cafe. It's an important topic and I wanted to create a static webpage about them. The project shows my early skills in web development and how I started my journey.", linkServer: 'https://examprojekt.vercel.app/', linkGit: 'https://github.com/ViktoriaBors/FrontendExamProjekt', img:'img/bows.png'}
+  {id:0, isActive: ref(false), title: 'Multilingual Children Library', stacks: 'JavaScript, Vue Js, Tailwind Css, PHP, SQL', desc: "This side project was a motivation to dig deeper in PHP and SQL. As someone from a multilingual family, I know how important it is for children to learn their mother tongue. Users can search  books, and once logged in, they can issue and return a book. There is an admin platform, where 'simple' admin can change active status for books, deal with issued books when they returned. As a 'super' admin, you have the right to do ban, delete a user.", linkServer: 'https://online-library-ochre.vercel.app/', linkGit: 'https://github.com/ViktoriaBors/online-library', img:'img/library.png' },
+  {id:1, isActive: ref(false), title: 'SpaceRock', stacks: 'JavaScript, Node Js, Mongo DB, Vue Js, Tailwind Css', desc: "I did a JavaScript module exam project called SpaceRock, which was inspired by ESA SACF. It's basically a CRUD app with a cool geological twist - it's all about the analogue and simulant samples from the Moon. Users can search the database, and once logged in, they can add, modify, and delete samples. It even has a feature for uploading images. I've since updated and re-written the project using the Vue.js framework.", linkServer: 'https://spacerockvue.onrender.com/', linkGit: 'https://github.com/ViktoriaBors/SpaceRockVue', img:'img/spacerock1.png' },
+  {id:2, isActive: ref(false), title: 'Bows Cafe', stacks: 'HTML, CSS, SASS, Bootstrap, Javascript', desc: "I did a front-end module exam project called Bows Cafe, which was inspired by a local LGBT+ gathering place called Buens Cafe. It's an important topic and I wanted to create a static webpage about them. The project shows my early skills in web development and how I started my journey.", linkServer: 'https://examprojekt.vercel.app/', linkGit: 'https://github.com/ViktoriaBors/FrontendExamProjekt', img:'img/bows.png'},
 ]
 
 const isOpen = ref(false)

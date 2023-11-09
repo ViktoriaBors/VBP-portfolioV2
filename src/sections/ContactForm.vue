@@ -24,8 +24,8 @@
     </div>
     </div>
   </div> 
-    <div class="flex justify-center text-justify">
-      <p class="max-w-5xl mx-3 text-sm text-white">
+    <div class="w-full text-justify">
+      <p class="mx-3 text-sm text-white lg:mx-0 ">
         We collect your name, email address, and message when you submit a form on the website. We use this information to respond to your message or enquiry. We protect your personal data and respect your rights under the GDPR. 
       </p>
     </div>

@@ -16,7 +16,9 @@
       <p class="pb-2 text-base text-left">She fall in love with web development, it's the ultimate cure for Gaga fatigue and peek-a-boo overload.</p>
       <p class="text-lg text-left">I am a self-taught/bootcamper web developer, focused on frontend technologies.</p>
       <div class="flex items-center gap-2 mt-8 sm:inline-block md:flex-row">
+       <!--
         <a href="/img/VBP.pdf" download="ViktoriaPajusteResume"> <BaseButton text="grab CV" class="w-32" @click="isShowCv = true"/> </a>
+        -->
         <a href="#contact"><SecondaryButton text="contact me" class="w-32 ml-4 bg-white" /></a>
       </div>
     </div>
