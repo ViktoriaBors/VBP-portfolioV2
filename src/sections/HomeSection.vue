@@ -7,7 +7,7 @@
       <h1 class="pb-1 text-xl font-bold">Hi There,</h1>
       <h3 class="pb-1 text-3xl font-bold">I'm Viktoria Bors-Pajuste</h3>
       <ul class="pb-4">
-        <li class="text-lg font-bold tracking-wide">FrontEnd Developer</li>
+        <li class="text-lg font-bold tracking-wide">Software Developer</li>
         <li>Geologist and Environmental Engineer</li>
         <li>Chemist and Lab Technician</li>
         <li>Wife and Mom</li>

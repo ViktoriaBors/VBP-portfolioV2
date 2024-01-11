@@ -1,7 +1,7 @@
 <template>
   <div class="p-6 m-2 rounded-lg dark:shadow-lg bg-grayl dark:bg-cardDark dark:text-grayl" >
     <p class="pb-2 font-bold">I build kick-ass web apps with these tools:</p>
-    <p class="text-justify"> So, I'm a self-taught web developer who's all about frontend stuff. I dig using JavaScript, especially with Vue.js. I've got some skills in using Node.js as a backend tool. I'm also a fan of MongoDB as my go-to database, and for styling,
+    <p class="text-justify"> So, I'm a self-taught software and web developer who enjoys working on frontend and dig deep into databases as well. I dig using JavaScript, especially with Vue.js. I have experience with C# and Delphi, moreover I've got some skills in using Node.js too. I'm also a fan of MongoDB, but MySQL is my go-to database, and for styling,
       I'm all about Tailwind CSS. But I also know my way around Bootstrap. And let's not forget, version control is a must, so I'm all in on Git and Github. </p>
    <div class="grid grid-cols-3 mt-8 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-8 justify-items-center">
       <div class="flex flex-col items-center justify-center p-3">
