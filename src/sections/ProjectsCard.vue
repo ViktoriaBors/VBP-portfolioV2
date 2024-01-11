@@ -25,9 +25,10 @@
                 <div
                     class="flex flex-row mt-4 ml-1">
                     <a  v-if="project.id == 0" href="https://fromlabtoweb.hu/itmansys/publish.zip" target="_blank" class="mr-7"><SecondaryButton text="download exe"></SecondaryButton></a>
-                     <a  v-if="project.id != 0" :href="project.linkServer" target="_blank" class="mr-7"><SecondaryButton text="live server"></SecondaryButton></a>
+                    <a  v-if="project.id != 0" :href="project.linkServer" target="_blank" class="mr-7"><SecondaryButton text="live server"></SecondaryButton></a>
                     <a :href="project.linkGit" target="_blank"><SecondaryButton text="source code"></SecondaryButton></a> 
                 </div>
+                <p v-if="project.id==0" class="inline font-semibold text-red-800 text-sm pt-2 dark:text-red-200" >Info: After download, EXTRACT the zip file then run the SETUP application file.</p>
             </div>
         </div>
   </div>
