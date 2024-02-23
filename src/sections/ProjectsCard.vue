@@ -25,10 +25,12 @@
                 <div
                     class="flex flex-row mt-4 ml-1">
                     <a  v-if="project.id == 0" href="https://fromlabtoweb.hu/itmansys/publish.zip" target="_blank" class="mr-7"><SecondaryButton text="download exe"></SecondaryButton></a>
+                    <a  v-if="project.id == 1" href="https://fromlabtoweb.hu/itmansys/com.prooktatas.vbpparkingapp.apk" target="_blank" class="mr-7"><SecondaryButton text="download exe"></SecondaryButton></a>
                     <a  v-if="project.id != 0" :href="project.linkServer" target="_blank" class="mr-7"><SecondaryButton text="live server"></SecondaryButton></a>
                     <a :href="project.linkGit" target="_blank"><SecondaryButton text="source code"></SecondaryButton></a> 
                 </div>
-                <p v-if="project.id==0" class="inline font-semibold text-red-800 text-sm pt-2 dark:text-red-200" >Info: After download, EXTRACT the zip file then run the SETUP application file.</p>
+                  <p v-if="project.id==0" class="inline font-semibold text-red-800 text-sm pt-2 dark:text-red-200" >Info: After download, transfer the apk file to an Android phone to install. You might need to allow direct install under the Settings on the phone.</p>
+                <p v-if="project.id==1" class="inline font-semibold text-red-800 text-sm pt-2 dark:text-red-200" >Info: After download, EXTRACT the zip file then run the SETUP application file.</p>              
             </div>
         </div>
   </div>
@@ -40,17 +42,62 @@
 </template>
 
 <script setup>
-import {ref} from 'vue'
+import { ref } from 'vue'
 import SecondaryButton from '../components/SecondaryButton.vue'
 import ReadMoreButton from '../components/ReadMoreButton.vue'
 import BaseButton from '../components/BaseButton.vue'
 
 let projects = [
-  {id:0, isActive: ref(false), title: 'IT Storage Management system', stacks: 'C#, MySQL', desc: "During the 7 months C# Basics module, I have learned the basics of C# and WinForms applications.The project itself is a storage manager system for computer parts. The main objective of this project is to create a simple CRUD (Create, Read, Update, Delete) application that enables the client to track its storage. The client can choose from 5 different computer parts and add new parts in the system or delete one. These computer parts can be connected to a given storage, where their in stock piece needs to be given. From the given storage each part can be added more or deleted some. It is possible to export the given computer part and then import it.", linkServer: '', linkGit: 'https://github.com/ViktoriaBors/itmansys', img:'img/csharp.png'},
-  {id:1, isActive: ref(false), title: 'Multilingual Children Library', stacks: 'JavaScript, Vue Js, Tailwind Css, PHP, SQL', desc: "This side project was a motivation to dig deeper in PHP and SQL. As someone from a multilingual family, I know how important it is for children to learn their mother tongue. Users can search  books, and once logged in, they can issue and return a book. There is an admin platform, where 'simple' admin can change active status for books, deal with issued books when they returned. As a 'super' admin, you have the right to do ban, delete a user.", linkServer: 'https://online-library-ochre.vercel.app/', linkGit: 'https://github.com/ViktoriaBors/online-library', img:'img/library.png' },
-  {id:2, isActive: ref(false), title: 'SpaceRock', stacks: 'JavaScript, Node Js, Mongo DB, Vue Js, Tailwind Css', desc: "I did a JavaScript module exam project called SpaceRock, which was inspired by ESA SACF. It's basically a CRUD app with a cool geological twist - it's all about the analogue and simulant samples from the Moon. Users can search the database, and once logged in, they can add, modify, and delete samples. It even has a feature for uploading images. I've since updated and re-written the project using the Vue.js framework.", linkServer: 'https://spacerockvue.onrender.com/', linkGit: 'https://github.com/ViktoriaBors/SpaceRockVue', img:'img/spacerock1.png' },
-  {id:3, isActive: ref(false), title: 'Bows Cafe', stacks: 'HTML, CSS, SASS, Bootstrap, Javascript', desc: "I did a front-end module exam project called Bows Cafe, which was inspired by a local LGBT+ gathering place called Buens Cafe. It's an important topic and I wanted to create a static webpage about them. The project shows my early skills in web development and how I started my journey.", linkServer: 'https://examprojekt.vercel.app/', linkGit: 'https://github.com/ViktoriaBors/FrontendExamProjekt', img:'img/bows.png'},
-
+  {
+    id: 0,
+    isActive: ref(false),
+    title: 'ParkIT mobile app',
+    stacks: 'C#, MySQL, Xamarin',
+    desc: "During the 2 months C# 'Pro' module, I have learned the basics of Xamarin with a taste of Asp.Net. The user can save numberplates and start a parking with a specific registered numberplate. After the user stops the parking, the app calculates the price with a basic rate of 8 HUF per minute.",
+    linkServer: '',
+    linkGit: 'https://github.com/ViktoriaBors/VBP_ParkingApp',
+    img: 'img/parkitapp.png'
+  },
+  {
+    id: 1,
+    isActive: ref(false),
+    title: 'IT Storage Management system',
+    stacks: 'C#, MySQL',
+    desc: "During the 7 months C# Basics module, I have learned the basics of C# and WinForms applications. The project itself is a storage manager system for computer parts. The main objective of this project is to create a simple CRUD (Create, Read, Update, Delete) application that enables the client to track its storage. The client can choose from 5 different computer parts and add new parts in the system or delete one. These computer parts can be connected to a given storage, where their in-stock quantity needs to be given. From the given storage, each part can be added more or deleted some. It is possible to export the given computer part and then import it.",
+    linkServer: '',
+    linkGit: 'https://github.com/ViktoriaBors/itmansys',
+    img: 'img/csharp.png'
+  },
+  {
+    id: 2,
+    isActive: ref(false),
+    title: 'Multilingual Children Library',
+    stacks: 'JavaScript, Vue Js, Tailwind Css, PHP, SQL',
+    desc: "This side project was a motivation to dig deeper into PHP and SQL. As someone from a multilingual family, I know how important it is for children to learn their mother tongue. Users can search for books, and once logged in, they can issue and return a book. There is an admin platform where 'simple' admin can change the active status for books, deal with issued books when they returned. As a 'super' admin, you have the right to ban or delete a user.",
+    linkServer: 'https://online-library-ochre.vercel.app/',
+    linkGit: 'https://github.com/ViktoriaBors/online-library',
+    img: 'img/library.png'
+  },
+  {
+    id: 3,
+    isActive: ref(false),
+    title: 'SpaceRock',
+    stacks: 'JavaScript, Node Js, Mongo DB, Vue Js, Tailwind Css',
+    desc: "I did a JavaScript module exam project called SpaceRock, which was inspired by ESA SACF. It's basically a CRUD app with a cool geological twist - it's all about the analogue and simulant samples from the Moon. Users can search the database, and once logged in, they can add, modify, and delete samples. It even has a feature for uploading images. I've since updated and rewritten the project using the Vue.js framework.",
+    linkServer: 'https://spacerockvue.onrender.com/',
+    linkGit: 'https://github.com/ViktoriaBors/SpaceRockVue',
+    img: 'img/spacerock1.png'
+  },
+  {
+    id: 4,
+    isActive: ref(false),
+    title: 'Bows Cafe',
+    stacks: 'HTML, CSS, SASS, Bootstrap, Javascript',
+    desc: "I did a front-end module exam project called Bows Cafe, which was inspired by a local LGBT+ gathering place called Buns Cafe. It's an important topic and I wanted to create a static webpage about them. The project shows my early skills in web development and how I started my journey.",
+    linkServer: 'https://examprojekt.vercel.app/',
+    linkGit: 'https://github.com/ViktoriaBors/FrontendExamProjekt',
+    img: 'img/bows.png'
+  }
 ]
 
 const isOpen = ref(false)
